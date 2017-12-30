@@ -127,6 +127,22 @@
 			width: 1px;
 		}
 
+/* Main Animation */
+
+    .mainAnim {
+        animation: main 3s;
+    }
+
+    @keyframes main {
+        0% {
+            margin-top: 0%
+        }
+        
+        100% {
+            margin-top: -100%
+        }
+    }
+
 /* Header */
 
 	@keyframes header {
@@ -148,9 +164,6 @@
 		}
 
 		100% {
-			-moz-transform: translate3d(0,0,0);
-			-webkit-transform: translate3d(0,0,0);
-			-ms-transform: translate3d(0,0,0);
 			transform: translate3d(0,0,0);
 			opacity: 1;
 		}
@@ -280,19 +293,81 @@
 					display: none;
 				}
 
+        #button {
+            margin: 2em 0 0 0;
+        }
+
+            #button a {
+                    border: 0;
+                    display: inline-block;
+                    height: 2.5em;
+					line-height: 3.5em;
+                }
+
+                    #button a:before {
+                        transition: all 0.2s ease-in-out;
+                        display: block;
+                        font-size: 1.75em;
+                        height: 2.5em;
+                        line-height: 2.5em;
+                        position: relative;
+                        text-align: center;
+                        top: 0;
+                        width: 2.5em;
+                    }
+
+                    #button a:hover {
+                        font-size: 1.1em;
+                    }
+
+                        #button a:hover:before {
+                            background-color: #333;
+                            color: #fff;
+                        }
+
+                    #button a:active {
+                        font-size: 0.95em;
+                        background: none;
+                    }
+
+                        #button a:active:before {
+                            background-color: #333;
+                            color: #fff;
+                        }
+
+                    #button a span {
+                        display: none;
+                    }
+
 /* Footer */
 
 	#footer {
 		bottom: 0;
 		cursor: default;
-		height: 6em;
+		height: 3.25em;
 		left: 0;
-		line-height: 8em;
+		line-height: 1.5em;
 		position: absolute;
 		text-align: center;
 		width: 100%;
 	}
+    
+    #footer h2 {
+        font-size: 1.25em;
+        font-weight: 650;
+    }
 
+    #chevron {
+        border-bottom: none;
+        animation: chevron 5s infinite;
+    }
+
+/* Chevron Animation */
+    
+    @keyframes chevron {
+        
+    }
+    
 /* Wide */
 
 	@media screen and (max-width: 1680px) {
