@@ -12,39 +12,100 @@
         <title>Adrian Orłów</title>
         
         <!-- Main CSS -->
-		<link rel="stylesheet" href="css/main.min.css"/>
-		<!-- <link rel="stylesheet" href="src/css/main.css"/> -->
+		<link rel="stylesheet" href="dist/css/style.min.css"/>
+		<!-- <link rel="stylesheet" href="src/css/style.css"/> -->
+
+		<!-- Smooth Scroll -->
+		<script src="dist/js/scroll.js"></script>
+		<script>
+			var scroll = new SmoothScroll('a[href*="#"]');
+		</script>
 		
 		<!-- FontAwesome -->
 		<script src="https://use.fontawesome.com/c8c98e0020.js"></script>
 		
 		<!-- Fonts -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900"/>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"/>
 	</head>
 	<body>
-		<div id="wrapper">
-			<div id="main">
-					<header id="header">
-						<h1>Adrian Orłów</h1>
-						<p>Nastolatek &nbsp;&bull;&nbsp; Początkujący programista &nbsp;&bull;&nbsp; Poszukiwacz prawdy</p>
-						<nav>
-							<ul>
-								<li><a href="https://goo.gl/U6psDG" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="https://goo.gl/XtacYL" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-								<li><a href="https://goo.gl/9tqwYZ" class="icon fa-github"><span class="label">Github</span></a></li>
-								<li><a href="https://goo.gl/93tmGX" class="icon fa-telegram"><span class="label">Telegram</span></a></li>
-								<li><a href="mailto:aorlow@mail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-							</ul>
-						</nav>
-					</header>
+		<header class="header">
+			<div class="header--container">
+				<h1 class="header--title">
+					A
+				</h1>
 
-					<footer id="footer">
-						<a href="about.html"><h2>O mnie</h2></a>
-						<a href="#"><h2>Blog</h2></a>
-						<a href="photos.html"><h2>Moje zdjęcia</h2></a>
-					</footer>
+				<nav class="header--nav">
+					<ul class="nav--list">
+						<li class="nav--element"><a class="nav--link" data-scroll href="#o-mnie">o mnie</a></li>
+						<li class="nav--element"><a class="nav--link" data-scroll href="#kontakt">kontakt</a></li>
+						<li class="nav--element"><a class="nav--link" href="http://blog.orlow.me/">blog</a></li>
+					</ul>
+				</nav>
+				<!--<div class="nav--hamburger hidden">
+					<a href="#" class="icon fa-bars" onclick="openNav()"></a>
+					<div class="nav--hamburger__content hidden">
+						<a class="nav--link" data-scroll href="#o-mnie">o mnie</a>
+						<a class="nav--link" data-scroll href="#kontakt">kontakt</a>
+						<a class="nav--link" href="http://blog.orlow.me/">blog</a>
+					</div>
+				</div>-->
 			</div>
-		</div>
+		</header>
+
+		<main>
+			<section class="section section__hero">
+				<div class="section--container">
+						<h1 class="hero--title">Adrian Orłów</h1>
+						<p class="hero--subtitle">Nastolatek &nbsp;•&nbsp; Początkujący programista &nbsp;•&nbsp; Poszukiwacz prawdy</p>
+				</div>
+			</section>
+			<section class="section section__dark" id="o-mnie">
+				<div class="section--container">
+						<h1 class="section--title">O mnie</h1>
+						<p class="section--paragraph">
+							Cześć!
+							<br/><br/>
+							Nazywam się Adrian Orłów, interesuję się wieloma rzeczami, jest to m.in. programowanie, ekonomia i fotografia. Obecnie jestem uczniem III klasy gimnazjum. Kocham minimalizm i elegancję, co zresztą możesz zauważyć przeglądając tę stronę. Jeśli chcesz się ze mną skontaktować, sprawdź formularz na dole strony.
+							<br/><br/>
+							Przy okazji możesz również zajrzeć na mojego bloga.
+						</p>
+				</div>
+			</section>
+			<section class="section section__light" id="kontakt">
+				<div class="section--container">
+						<h1 class="section--title">Kontakt</h1>
+						<div class="form--contact">
+								<div class="form--container">
+									<form action="https://www.enformed.io/odu8zvjr" method="POST">
+										<input class="form__input" type="text" name="name" placeholder="Imię" required>
+										<input class="form__input" type="text" name="subject" placeholder="Temat" required>
+										<input class="form__input" type="email" name="replyto" placeholder="Twój E-mail" required>
+										<textarea class="form__input form__textarea" name="message" rows="6" cols="25" placeholder="Treść wiadomości" required></textarea>
+										<input class="form__input" type="hidden" name="*redirect" value="http://www.orlow.me/about.html" />
+										<input class="form__input form__sumbit" type="submit" value="&#xf1d8;">
+									</form>
+								</div>
+						</div>
+				</div>
+			</section>
+			<footer class="footer">
+				<div class="footer--container">
+					<h1 class="footer--title">
+						© Adrian Orłów, 2018
+					</h1>
+
+					<div class="footer--nav">
+						<ul class="footer--list">
+							<li class="footer--element"><a href="https://goo.gl/U6psDG" class="footer--link icon fa-twitter"></a></li>
+							<li class="footer--element"><a href="https://goo.gl/XtacYL" class="footer--link icon fa-facebook"></a></li>
+							<li class="footer--element"><a href="https://goo.gl/9tqwYZ" class="footer--link icon fa-github"></a></li>
+							<li class="footer--element"><a href="https://goo.gl/93tmGX" class="footer--link icon fa-telegram"></a></li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+		</main>
 	</body>
 </html>
