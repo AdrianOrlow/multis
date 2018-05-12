@@ -55,6 +55,18 @@
 		a:visited {
 			color: #333;
 		}
+
+        .a--light {
+            color: #fafafa;
+        }
+
+        .a--light:hover {
+            text-decoration: underline;
+        }
+
+        .a--light:visited {
+			color: #fafafa;
+		}
 	
 	.hidden {
 		display: none;
@@ -215,6 +227,23 @@
 			display: none;
 		}
 			
+
+    .form__thankyou {
+        visibility: hidden;
+        float: left;
+        font-family: Montserrat;
+        font-weight: 600;
+        height: 4em;
+        padding: 1.5em 5em;
+        font-size: 1em;
+        transition: all .2s ease-in-out;
+    }
+
+        .form__thankyou:target {
+            visibility: visible;
+        }
+
+    
 /* Icon */
 
 	.icon {
@@ -318,6 +347,10 @@
 	.form__sumbit {
 		width: 40vw;
 	}
+    
+    .form__thankyou {
+        padding: 1.5em 3em;
+    }
 
 	.footer {
 		font-size: 1.2em;
