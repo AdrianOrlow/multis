@@ -110,8 +110,9 @@
                     }
                     if(q.answer>0) {
                         axes[a.axis].val += q.answer * a.effect;
+                        axes[a.axis].sum += Math.max(a.effect, 0);
                     }
-                    axes[a.axis].sum += Math.max(a.effect, 0);
+                    
                 }
 
                 for(var j=0; j<q.effectsNo.length; j++) {
@@ -126,8 +127,9 @@
 
                     if(q.answer<0) {
                         axes[a.axis].val += Math.abs(q.answer) * a.effect;
+                        axes[a.axis].sum += Math.max(a.effect, 0);
                     }
-                    axes[a.axis].sum += Math.max(a.effect, 0);
+                    
                 }
             }
             url = ""
