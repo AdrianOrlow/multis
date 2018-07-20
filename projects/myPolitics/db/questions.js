@@ -568,7 +568,7 @@ questions = [
         ]
     },
     {
-        question: "Należy dokonać rodziału kościoła od państwa",
+        question: "Należy dokonać rozdziału kościoła od państwa",
         answer: 0,
         effectsYes: [
             {

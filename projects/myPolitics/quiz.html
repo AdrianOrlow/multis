@@ -13,8 +13,8 @@
     <title>myPolitics</title>
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="dist/css/style.min.css"/>
-    <!-- <link rel="stylesheet" href="src/css/style.css" /> -->
+    <!-- <link rel="stylesheet" href="dist/css/style.min.css"/> -->
+    <link rel="stylesheet" href="src/css/style.css" />
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
@@ -138,7 +138,7 @@
             }
             var labels = ["a1","a2","b1","b2","c1","c2","d1","d2","e1","e2","f1","f2","g1","g2"];
             for (var i=0;i < labels.length;i+=2) {
-                if(axes[labels[i]].val > 0) {
+                if(axes[labels[i]].val > 0 || axes[labels[i+1]].val > 0) {
                     if(url != "")
                         url += "&"
                     var axisFullSum = axes[labels[i]].sum + axes[labels[i+1]].sum;
