@@ -13,8 +13,8 @@
     <title>myPolitics</title>
 
     <!-- Main CSS -->
-    <!-- <link rel="stylesheet" href="dist/css/style.min.css"/> -->
-    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="dist/css/style.min.css"/>
+    <!-- <link rel="stylesheet" href="src/css/style.css" /> -->
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
@@ -40,15 +40,15 @@
                 <p class="quiz__title" id="qInfo"></p>
                 <div class="quiz__question" id="qText"></div>
                 <div class="quiz__answers">
-                    <div class="quiz__answer" onclick="nextQ(1)">Zdecydowanie się zgadzam</div>
-                    <div class="quiz__answer" onclick="nextQ(2/3)">Zgadzam się</div>
-                    <div class="quiz__answer" onclick="nextQ(0)">Nie mam zdania/nie wiem</div>
-                    <div class="quiz__answer" onclick="nextQ(-2/3)">Nie zgadzam się</div>
-                    <div class="quiz__answer" onclick="nextQ(-1)">Zdecydowanie się nie zgadzam</div>
+                    <button class="quiz__answer" onclick="nextQ(1)">Zdecydowanie się zgadzam</button>
+                    <button class="quiz__answer" onclick="nextQ(2/3)">Zgadzam się</button>
+                    <button class="quiz__answer" onclick="nextQ(0)">Nie mam zdania/nie wiem</button>
+                    <button class="quiz__answer" onclick="nextQ(-2/3)">Nie zgadzam się</button>
+                    <button class="quiz__answer" onclick="nextQ(-1)">Zdecydowanie się nie zgadzam</button>
                 </div>
                 <div class="quiz__actions">
-                    <div class="quiz__action" onclick="prevQ()" id="prevBtn">Poprzednie pytanie</div>
-                    <div class="quiz__action" onclick="again()">Rozpocznij od nowa</div>
+                    <button class="quiz__action" onclick="prevQ()" id="prevBtn">Poprzednie pytanie</button>
+                    <button class="quiz__action" onclick="again()">Rozpocznij od nowa</button>
                 </div>
             </div>
         </div>
