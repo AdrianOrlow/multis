@@ -12,14 +12,18 @@
         <title>Adrian Orłów</title>
         
         <!-- Main CSS -->
-		<link rel="stylesheet" href="dist/css/style.min.css"/>
-		<!-- <link rel="stylesheet" href="src/css/style.css"/> -->
+		<!-- <link rel="stylesheet" href="dist/css/style.min.css"/> -->
+		<link rel="stylesheet" href="src/css/style.css"/>
 
 		<!-- Smooth Scroll -->
 		<script src="dist/js/scroll.js"></script>
 		<script>
 			var scroll = new SmoothScroll('a[href*="#"]');
 		</script>
+
+		<!-- App scripts -->
+		<!-- <script src="dist/js/app.js"></script> -->
+		<script src="src/js/app.js"></script>
 		
 		<!-- FontAwesome -->
 		<script src="https://use.fontawesome.com/c8c98e0020.js"></script>
@@ -39,18 +43,20 @@
 				<nav class="header--nav">
 					<ul class="nav--list">
 						<li class="nav--element"><a class="nav--link" data-scroll href="#o-mnie">o mnie</a></li>
+						<li class="nav--element"><a class="nav--link" data-scroll href="#projekty">projekty</a></li>
 						<li class="nav--element"><a class="nav--link" data-scroll href="#kontakt">kontakt</a></li>
-						<li class="nav--element"><a class="nav--link" href="http://blog.orlow.me/">blog</a></li>
+						<li class="nav--element"><a class="nav--link link--blog" href="http://blog.orlow.me/">blog</a></li>
 					</ul>
 				</nav>
-				<!--<div class="nav--hamburger hidden">
-					<a href="#" class="icon fa-bars" onclick="openNav()"></a>
+				<div class="nav--hamburger hidden">
+					<a href="#" class="icon fa-bars" onclick="toggleNav()"></a>
 					<div class="nav--hamburger__content hidden">
-						<a class="nav--link" data-scroll href="#o-mnie">o mnie</a>
-						<a class="nav--link" data-scroll href="#kontakt">kontakt</a>
-						<a class="nav--link" href="http://blog.orlow.me/">blog</a>
+						<a class="hamburger--link" data-scroll onclick="toggleNav()" href="#o-mnie">o mnie</a>
+						<a class="hamburger--link" data-scroll onclick="toggleNav()" href="#projekty">projekty</a>
+						<a class="hamburger--link" data-scroll onclick="toggleNav()" href="#kontakt">kontakt</a>
+						<a class="hamburger--link" onclick="toggleNav()" href="http://blog.orlow.me/">blog</a>
 					</div>
-				</div>-->
+				</div>
 			</div>
 		</header>
 
@@ -58,7 +64,7 @@
 			<section class="section section__hero">
 				<div class="section--container">
 						<h1 class="hero--title">Adrian Orłów</h1>
-						<p class="hero--subtitle">Nastolatek &nbsp;•&nbsp; Początkujący programista &nbsp;•&nbsp; Poszukiwacz prawdy</p>
+						<p class="hero--subtitle">Nastolatek &nbsp;•&nbsp; Początkujący programista</p>
 				</div>
 			</section>
 			<section class="section section__dark" id="o-mnie">

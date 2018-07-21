@@ -67,10 +67,6 @@
         .a--light:visited {
 			color: #fafafa;
 		}
-	
-	.hidden {
-		display: none;
-	}
 
 /* Header */
 
@@ -116,9 +112,62 @@
 				outline: 0;
 				cursor: pointer;
 			}
+			
+		.link--blog {
+			padding: .25em .5em;
+			border: 3px solid #333;
+			border-radius: .5em;
+			transition: .2s ease-in-out;
+		}
+
+		.link--blog:hover {
+			border: 3px solid #333;
+			outline: initial;
+			background: #333;
+			color: #fafafa;
+		}
 
 	/* Hamburger Menu */
 
+	.nav--hamburger a:first-child {
+		z-index: 1000;
+	}
+
+	.nav--hamburger__content {
+		height: 100%;
+		width: 100%;
+		z-index: 100;
+		background: #f5f5f5;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		transition: .2s ease-in-out;
+	}
+
+		.hamburger--link {
+			font-size: .8em;
+			font-weight: 600;
+			text-transform: uppercase;
+			display: block;
+			text-align: center;
+		}
+		
+		.hamburger--active {
+			
+		}
 
 
 /* Sections */
@@ -303,10 +352,16 @@
 				color: #333;
 			}
 
+/* End basic */
+
+.hidden {
+	display: none;
+}
+
 
 /* Tablet & Mobile */
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .header--container {
 		width: 90vw;
 	}
@@ -319,14 +374,14 @@
 /* Mobile */
 
 @media (max-width: 768px) {
-	
-	/*.nav--list {
+
+	.header--nav {
 		display: none;
 	}
 
 	.nav--hamburger {
-		display: initial;
-	}*/
+		display: block;
+	}
 
     .hero--title {
 		font-size: 3em;
