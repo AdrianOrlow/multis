@@ -85,8 +85,7 @@
         }
 
         function initQ () {
-            var qText = questions[qNum].question;
-            qText.innerHTML = qText;
+            qText.innerHTML = questions[qNum].question;
             qInfo.innerHTML = "Pytanie " + (qNum+1) + " z " + qMax;
             if (qNum == 0) {
                 prevBtn.style.visibility = "hidden";
