@@ -1,118 +1,263 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="theme-color" content="#fafafa">
-        <meta property="og:url" content="http://orlow.me">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Adrian Orłów">
-        <meta property="og:description" content="Nastoletni początkujący programista i poszukiwacz prawdy">
-        <meta property="og:image" content="http://orlow.me/img/thumbnails/main.png">
-        <title>Adrian Orłów</title>
-        
-        <!-- Main CSS -->
-		<!-- <link rel="stylesheet" href="dist/css/style.min.css"/> -->
-		<link rel="stylesheet" href="src/css/style.css"/>
 
-		<!-- Smooth Scroll -->
-		<script src="dist/js/scroll.js"></script>
-		<script>
-			var scroll = new SmoothScroll('a[href*="#"]');
-		</script>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#fafafa">
+	<meta property="og:url" content="http://orlow.me">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Adrian Orłów">
+	<meta property="og:description" content="Nastoletni początkujący programista i poszukiwacz prawdy">
+	<meta property="og:image" content="http://orlow.me/img/thumbnails/main.png">
+	<title>Adrian Orłów</title>
 
-		<!-- App scripts -->
-		<!-- <script src="dist/js/app.js"></script> -->
-		<script src="src/js/app.js"></script>
-		
-		<!-- FontAwesome -->
-		<script src="https://use.fontawesome.com/c8c98e0020.js"></script>
-		
-		<!-- Fonts -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900"/>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"/>
-	</head>
-	<body>
-		<header class="header">
-			<div class="header--container">
-				<h1 class="header--title">
-					A
-				</h1>
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="dist/css/style.min.css" />
+	<!-- <link rel="stylesheet" href="src/css/style.css" /> -->
 
-				<nav class="header--nav">
-					<ul class="nav--list">
-						<li class="nav--element"><a class="nav--link" data-scroll href="#o-mnie">o mnie</a></li>
-						<li class="nav--element"><a class="nav--link" data-scroll href="#projekty">projekty</a></li>
-						<li class="nav--element"><a class="nav--link" data-scroll href="#kontakt">kontakt</a></li>
-						<li class="nav--element"><a class="nav--link link--blog" href="http://blog.orlow.me/">blog</a></li>
-					</ul>
-				</nav>
-				<div class="nav--hamburger hidden">
-					<a href="#" class="icon fa-bars" onclick="toggleNav()"></a>
-					<div class="nav--hamburger__content hidden">
-						<a class="hamburger--link" data-scroll onclick="toggleNav()" href="#o-mnie">o mnie</a>
-						<a class="hamburger--link" data-scroll onclick="toggleNav()" href="#projekty">projekty</a>
-						<a class="hamburger--link" data-scroll onclick="toggleNav()" href="#kontakt">kontakt</a>
-						<a class="hamburger--link" onclick="toggleNav()" href="http://blog.orlow.me/">blog</a>
+	<!-- Smooth Scroll -->
+	<script src="dist/js/scroll.js"></script>
+
+	<!-- Animations -->
+	<link rel="stylesheet" href="src/css/animate.css">
+	<script src="src/js/wow.min.js"></script>
+
+	<!-- App scripts -->
+	<script src="dist/js/app.min.js"></script>
+	<!-- <script src="src/js/app.js"></script>-->
+
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+	    crossorigin="anonymous">
+
+	<!-- Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900">
+</head>
+
+<body>
+	<header class="header">
+		<div class="header--container">
+			<h1 class="header--title">
+				Adrian Orłów
+			</h1>
+			<nav class="header--nav">
+				<ul class="nav--list">
+					<li class="nav--element">
+						<a class="nav--link" data-scroll href="#about">o mnie</a>
+					</li>
+					<li class="nav--element">
+						<a class="nav--link" data-scroll href="#projects">projekty</a>
+					</li>
+					<li class="nav--element">
+						<a class="nav--link" data-scroll href="#blog">blog</a>
+					</li>
+					<li class="nav--element">
+						<a class="nav--link" data-scroll href="#skills">umiejętności</a>
+					</li>
+					<li class="nav--element">
+						<a class="nav--link link--last" data-scroll href="#contact">kontakt</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="nav--hamburger hidden">
+				<div href="#" class="hamburger--btn" onclick="toggleNav()">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="nav--hamburger__content hidden animated fadeInDown faster">
+					<a class="hamburger--link" data-scroll onclick="toggleNav()" href="#about">o mnie</a>
+					<a class="hamburger--link" data-scroll onclick="toggleNav()" href="#projects">projekty</a>
+					<a class="hamburger--link" data-scroll onclick="toggleNav()" href="#skills">umiejętności</a>
+					<a class="hamburger--link" data-scroll onclick="toggleNav()" href="#blog">blog</a>
+					<a class="hamburger--link" data-scroll onclick="toggleNav()" href="#contact">kontakt</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="section section__hero">
+			<div class="section--container container--hero">
+				<p class="hero--intro animated fadeIn">Cześć, jestem:</p>
+				<h1 class="hero--title animated fadeIn">Adrian Orłów</h1>
+				<p class="hero--subtitle animated jackInTheBox" style="animation-delay: 250ms">Programuję, piszę artykuły, a także działam politycznie.</p>
+
+				<div class="animated fadeInUp delay-1s">
+					<a class="hero__btn" data-scroll href="#about">Dowiedz się więcej</a>
+				</div>
+			</div>
+		</section>
+		<section class="section section__dark" id="about">
+			<div class="section--container" style="padding: 10% 0;">
+				<h1 class="section--title">O mnie</h1>
+				<div class="section--separator"></div>
+				<p class="section--subtitle">Trochę na mój temat. Kliknij na obrazek, aby dowiedzieć się więcej.</p>
+				<div class="about">
+					<a class="about__el animated wow fadeInDown" data-scroll href="#projects">
+						<img class="img--about" src="./img/about/programming.png">
+						<p class="p--about">Programuję</p>
+					</a>
+					<a class="about__el animated wow fadeInDown" style="animation-delay: 500ms" data-scroll href="#blog">
+						<img class="img--about" src="./img/about/writing.jpg">
+						<p class="p--about">Prowadzę bloga</p>
+					</a>
+					<a class="about__el animated wow fadeInDown delay-1s" href="https://www.facebook.com/TheAdrik">
+						<img class="img--about" src="./img/about/politics.jpg">
+						<p class="p--about">Działam politycznie</p>
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="section section__light" id="projects" style="padding: 5% 0;">
+			<div class="section--container">
+				<h1 class="section--title">Projekty</h1>
+				<div class="section--separator" style="background: #222"></div>
+				<p class="section--subtitle" style="color: #737373;">Poniżej znajdują się projekty stworzone przeze mnie w ciągu ostatnich kilku miesięcy.</p>
+				<div class="projects">
+					<div class="project animated wow zoomIn">
+						<img class="img--project" src="./img/projects/vlocal.png">
+						<p class="p--project">vLocal</p>
+					</div>
+					<div class="project animated wow zoomIn">
+						<img class="img--project" src="./img/projects/mypolitics.png">
+						<p class="p--project">myPolitics</p>
+					</div>
+					<div class="project animated wow zoomIn">
+						<img class="img--project" src="./img/projects/mylibrary.png">
+						<p class="p--project">myLibrary</p>
+					</div>
+				</div>
+				<div class="projects">
+					<div class="project animated wow zoomIn">
+						<img class="img--project" src="./img/projects/mini.png">
+						<p class="p--project">Mini</p>
+					</div>
+					<div class="project animated wow zoomIn">
+						<img class="img--project" src="./img/projects/groupadmin.png">
+						<p class="p--project">GroupAdmin</p>
+					</div>
+					<div class="project animated wow zoomIn">
+						<img class="img--project" src="./img/projects/aoblog.png">
+						<p class="p--project">Adrian Orłów Blog</p>
 					</div>
 				</div>
 			</div>
-		</header>
-
-		<main>
-			<section class="section section__hero">
-				<div class="section--container">
-						<h1 class="hero--title">Adrian Orłów</h1>
-						<p class="hero--subtitle">Nastolatek &nbsp;•&nbsp; Początkujący programista</p>
+		</section>
+		<section class="section section__dark" id="skills">
+			<div class="section--container" style="padding: 5% 0;">
+				<h1 class="section--title">Umiejętności</h1>
+				<div class="section--separator"></div>
+				<p class="section--subtitle">Oto technologie, z których korzystam i znam w stopniu przynajmniej średniozaawansowanym.</p>
+				<div class="skills">
+					<img class="skill animated wow bounceIn" src="./img/skills/js.png" alt="JavaScript">
+					<img class="skill animated wow bounceIn" src="./img/skills/css.png" alt="CSS">
+					<img class="skill animated wow bounceIn" src="./img/skills/vue.png" alt="Vue">
+					<img class="skill animated wow bounceIn" src="./img/skills/electron.png" alt="Electron">
 				</div>
-			</section>
-			<section class="section section__dark" id="o-mnie">
-				<div class="section--container">
-						<h1 class="section--title">O mnie</h1>
-						<p class="section--paragraph">
-							Cześć!
-							<br/><br/>
-							Nazywam się Adrian Orłów, interesuję się wieloma rzeczami, jest to m.in. programowanie, ekonomia i fotografia. Obecnie jestem uczniem III klasy gimnazjum. Kocham minimalizm i elegancję, co zresztą możesz zauważyć przeglądając tę stronę. Jeśli chcesz się ze mną skontaktować, sprawdź formularz na dole strony.
-							<br/><br/>
-							Przy okazji możesz również zajrzeć na 
-							<a class="a--light" href="http://blog.orlow.me">mojego bloga</a>.</p>
-				</div>
-			</section>
-			<section class="section section__light" id="kontakt">
-				<div class="section--container">
-						<h1 class="section--title">Kontakt</h1>
-						<div class="form--contact">
-								<div class="form--container">
-									<form action="https://www.enformed.io/odu8zvjr" method="POST">
-										<input class="form__input" type="text" name="name" placeholder="Imię" required>
-										<input class="form__input" type="text" name="subject" placeholder="Temat" required>
-										<input class="form__input" type="email" name="replyto" placeholder="Twój E-mail" required>
-										<textarea class="form__input form__textarea" name="message" rows="6" cols="25" placeholder="Treść wiadomości" required></textarea>
-										<input class="form__input" type="hidden" name="*redirect" value="http://www.orlow.me/#thankyou">
-										<p class="form__thankyou" id="thankyou">Wysłano!</p>
-										<input class="form__input form__sumbit" type="submit" value="&#xf1d8;">
-									</form>
-								</div>
+			</div>
+		</section>
+		<section class="section section__light" id="blog" style="padding: 5% 0;">
+			<div class="section--container">
+				<h1 class="section--title">Blog</h1>
+				<div class="section--separator" style="background: #222"></div>
+				<p class="section--subtitle" style="color: #737373;">Sprawdź najnowsze wpisy na moim blogu!</p>
+				<div class="articles">
+					<a href="http://blog.orlow.me/acta2-fakenews">
+						<div class="article animated wow fadeInUp">
+							<img class="img--article" src="./img/articles/0.png" alt="Odpowiedź na kłamliwą wypowiedź KE">
+							<div class="article__content">
+								<p class="article__title">Odpowiedź na kłamliwą wypowiedź KE</p>
+								<p class="article__lead">Merytoryczna i wyczerpująca odpowiedź na artykuł KEwPL pt. “Nie, nie zabierzemy Wam memów! #ACTA2 to #FAKENEWS!”</p>
+								<div class="article__btn">Czytaj dalej</div>
+							</div>
 						</div>
+					</a>
+					<a href="http://blog.orlow.me/patriotyzm-gospodarczy">
+						<div class="article animated wow fadeInUp">
+							<img class="img--article" src="./img/articles/1.png" alt="Patriotyzm gospodarczy - dlaczego nie?">
+							<div class="article__content">
+								<p class="article__title">Patriotyzm gospodarczy - dlaczego nie?</p>
+								<p class="article__lead">Głównym celem akcji typu “kupuj polskie” jest oczywiście tworzenie nowych miejsc pracy. W rzeczywistości jednak dzięki
+									kupowaniu produktów krajowych...</p>
+								<div class="article__btn">Czytaj dalej</div>
+							</div>
+						</div>
+					</a>
+					<a href="http://blog.orlow.me/pierwszy-wpis">
+						<div class="article animated wow fadeInUp">
+							<img class="img--article" src="./img/articles/2.png" alt="Cześć!">
+							<div class="article__content">
+								<p class="article__title">Cześć!</p>
+								<div class="article__lead">Oto pierwszy wpis na moim blogu. Będę publikował tutaj moje teksty poruszające bardzo wiele różnych tematów.</div>
+								<div class="article__btn">Czytaj dalej</div>
+							</div>
+						</div>
+					</a>
 				</div>
-			</section>
-			<footer class="footer">
-				<div class="footer--container">
-					<h1 class="footer--title">
-						© Adrian Orłów, 2018
-					</h1>
-
-					<div class="footer--nav">
-						<ul class="footer--list">
-							<li class="footer--element"><a href="https://goo.gl/U6psDG" class="footer--link icon fa-twitter"></a></li>
-							<li class="footer--element"><a href="https://goo.gl/XtacYL" class="footer--link icon fa-facebook"></a></li>
-							<li class="footer--element"><a href="https://goo.gl/9tqwYZ" class="footer--link icon fa-github"></a></li>
-							<li class="footer--element"><a href="https://goo.gl/93tmGX" class="footer--link icon fa-telegram"></a></li>
-						</ul>
+			</div>
+		</section>
+		<div class="contact--map"></div>
+		<section class="section section__light" id="contact" style="padding: 5% 0;">
+			<div class="section--container">
+				<h1 class="section--title">Kontakt</h1>
+				<div class="section--separator" style="background: #222"></div>
+				<div class="contact animated wow zoomInUp">
+					<div class="contact__el--top">
+						<span class="contact__label">Twoje imię</span>
+						<input class="contact__input" placeholder="Jan Kowalski">
 					</div>
+					<div class="contact__el--top">
+						<span class="contact__label">Twój email</span>
+						<input class="contact__input" placeholder="jan@mail.com">
+					</div>
+					<div class="contact__el--center">
+						<span class="contact__label">Temat</span>
+						<input class="contact__input" placeholder="Chęć podjęcia współpracy">
+					</div>
+					<div class="contact__el--center">
+						<span class="contact__label">Treść wiadomości</span>
+						<textarea class="contact__input contact__textarea"></textarea>
+					</div>
+					<buttton class="contact__btn animated wow pulse delay-1s">Wyślij</buttton>
 				</div>
-			</footer>
-		</main>
-	</body>
+			</div>
+		</section>
+		<footer class="footer">
+			<ul class="footer__links">
+				<a href="https://goo.gl/U6psDG">
+					<li>
+
+						<i class="fab fa-twitter"></i>
+					</li>
+				</a>
+				<a href="https://goo.gl/XtacYL">
+					<li>
+						<i class="fab fa-facebook-f"></i>
+					</li>
+				</a>
+				<a href="https://goo.gl/9tqwYZ">
+					<li>
+						<i class="fab fa-github"></i>
+					</li>
+				</a>
+				<a href="https://goo.gl/93tmGX">
+					<li>
+						<i class="fab fa-telegram-plane"></i>
+					</li>
+				</a>
+				<a href="mailto:aorlow@mail.com">
+					<li>
+						<i class="fas fa-envelope"></i>
+					</li>
+				</a>
+			</ul>
+		</footer>
+	</main>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfKXRZXeuDipRrraTgKT2JAf5qqLqDQj4&callback=initMap">
+	</script>
+</body>
+
 </html>
