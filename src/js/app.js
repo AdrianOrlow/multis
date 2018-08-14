@@ -1,6 +1,16 @@
 var scroll = new SmoothScroll('a[href*="#"]');
 new WOW().init();
 
+window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+    dataLayer.push(arguments);
+}
+gtag('js', new Date());
+
+gtag('config', 'UA-51375799-4');
+
+
 function initMap() {
     var city = {
         lat: 50.204987,
