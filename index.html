@@ -12,6 +12,9 @@
 	<meta property="og:image" content="http://orlow.me/img/thumbnails/main.png">
 	<title>Adrian Orłów</title>
 
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="ico/favicon.ico">
+
 	<!-- Main CSS -->
 	<link rel="stylesheet" href="dist/css/style.min.css" />
 	<!-- <link rel="stylesheet" href="src/css/style.css" /> -->
@@ -204,25 +207,26 @@
 			<div class="section--container">
 				<h1 class="section--title">Kontakt</h1>
 				<div class="section--separator" style="background: #222"></div>
-				<div class="contact animated wow zoomInUp">
+				<form class="contact animated wow zoomInUp" action="https://formspree.io/aorlow@mail.com" method="POST">
 					<div class="contact__el--top">
 						<span class="contact__label">Twoje imię</span>
-						<input class="contact__input" placeholder="Jan Kowalski">
+						<input class="contact__input" placeholder="Jan Kowalski" name="name" required>
 					</div>
 					<div class="contact__el--top">
 						<span class="contact__label">Twój email</span>
-						<input class="contact__input" placeholder="jan@mail.com">
+						<input class="contact__input" placeholder="jan@mail.com" name="_replyto" required>
 					</div>
 					<div class="contact__el--center">
 						<span class="contact__label">Temat</span>
-						<input class="contact__input" placeholder="Chęć podjęcia współpracy">
+						<input class="contact__input" placeholder="Chęć podjęcia współpracy" name="topic" required>
 					</div>
 					<div class="contact__el--center">
 						<span class="contact__label">Treść wiadomości</span>
-						<textarea class="contact__input contact__textarea"></textarea>
+						<textarea class="contact__input contact__textarea" name="message" required></textarea>
 					</div>
-					<buttton class="contact__btn animated wow pulse delay-1s">Wyślij</buttton>
-				</div>
+					<button class="contact__btn animated wow pulse delay-1s" type="submit">Wyślij</button>
+					<input type="hidden" name="_language" value="pl" />
+				</form>
 			</div>
 		</section>
 		<footer class="footer">
