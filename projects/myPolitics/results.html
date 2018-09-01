@@ -2,7 +2,6 @@
 
 <head>
     <title>Redirect to myPolitics</title>
-    <meta http-equiv="refresh" content="2; URL=https://mypolitics.orlow.me/">
     <meta name="keywords" content="automatic redirection">
 </head>
 
@@ -12,7 +11,7 @@
 
     <script language="javascript" type="text/javascript">
         setTimeout(function () {
-            window.location.href = str.replace("https://orlow.me/projects/myPolitics/",
+            window.location.href = window.location.href.replace("https://orlow.me/projects/myPolitics/",
                 "https://mypolitics.orlow.me/");
         }, 2000);
     </script>
