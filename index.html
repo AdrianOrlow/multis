@@ -20,7 +20,7 @@
 
 	<!-- Main CSS -->
 	<link rel="stylesheet" href="dist/css/style.min.css" />
-	<!-- <link rel="stylesheet" href="src/css/style.css" /> -->
+	<!--<link rel="stylesheet" href="src/css/style.css" />-->
 
 	<!-- Smooth Scroll -->
 	<script src="dist/js/scroll.js"></script>
@@ -31,18 +31,18 @@
 
 	<!-- App scripts -->
 	<script src="dist/js/app.min.js"></script>
-	<!-- <script src="src/js/app.js"></script>-->
+	<!--<script src="src/js/app.js"></script>-->
 
 	<!-- FontAwesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-	    crossorigin="anonymous">
+	 crossorigin="anonymous">
 
 	<!-- Fonts -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900">
 </head>
 
-<body>
-	<header class="header">
+<body id="body">
+	<header class="header" id="header">
 		<div class="header--container">
 			<h1 class="header--title">
 				Adrian Orłów
@@ -84,12 +84,13 @@
 		</div>
 	</header>
 
-	<main>
+	<main id="main">
 		<section class="section section__hero">
 			<div class="section--container container--hero">
 				<p class="hero--intro animated fadeIn">Cześć, jestem:</p>
 				<h1 class="hero--title animated fadeIn">Adrian Orłów</h1>
-				<p class="hero--subtitle animated jackInTheBox" style="animation-delay: 250ms">Programuję, piszę artykuły, a także działam politycznie.</p>
+				<p class="hero--subtitle animated jackInTheBox" style="animation-delay: 250ms">Programuję, piszę artykuły, a także
+					działam politycznie.</p>
 
 				<div class="animated fadeInUp delay-1s">
 					<a class="hero__btn" data-scroll href="#about">Dowiedz się więcej</a>
@@ -121,34 +122,49 @@
 			<div class="section--container">
 				<h1 class="section--title">Projekty</h1>
 				<div class="section--separator" style="background: #222"></div>
-				<p class="section--subtitle" style="color: #737373;">Poniżej znajdują się projekty stworzone przeze mnie w ciągu ostatnich kilku miesięcy.</p>
+				<p class="section--subtitle" style="color: #737373;">Poniżej znajdują się projekty stworzone przeze mnie w ciągu
+					ostatnich kilku miesięcy.</p>
 				<div class="projects">
-					<a href="https://github.com/TheAdrik/vLocal" class="project animated wow zoomIn">
-						<img class="img--project" src="./img/projects/vlocal.png">
-						<p class="p--project">vLocal</p>
-					</a>
-					<a href="https://github.com/TheAdrik/myPolitics" class="project animated wow zoomIn">
-						<img class="img--project" src="./img/projects/mypolitics.png">
-						<p class="p--project">myPolitics</p>
-					</a>
-					<a href="https://github.com/TheAdrik/myLibrary" class="project animated wow zoomIn">
-						<img class="img--project" src="./img/projects/mylibrary.png">
-						<p class="p--project">myLibrary</p>
-					</a>
+					<div onclick="showProjectInfo('short-news')" class="project animated wow zoomIn">
+						<img class="img--project" src="./img/projects/short-news.jpg">
+						<p class="p--project">ShortNews</p>
+					</div>
+					<div onclick="showProjectInfo('schoolbot')" class="project animated wow zoomIn">
+						<img class="img--project" src="./img/projects/schoolbot.jpg">
+						<p class="p--project">SchoolBot</p>
+					</div>
+					<div onclick="showProjectInfo('moje-zdrowie')" class="project animated wow zoomIn">
+						<img class="img--project" src="./img/projects/moje-zdrowie.jpg">
+						<p class="p--project">Moje Zdrowie</p>
+					</div>
 				</div>
 				<div class="projects">
-					<a href="https://github.com/TheAdrik/Mini" class="project animated wow zoomIn">
-						<img class="img--project" src="./img/projects/mini.png">
+					<div onclick="showProjectInfo('vlocal')" class="project animated wow zoomIn">
+						<img class="img--project" src="./img/projects/vlocal.jpg">
+						<p class="p--project">vLocal</p>
+					</div>
+					<div onclick="showProjectInfo('mypolitics')" class="project animated wow zoomIn">
+						<img class="img--project" src="./img/projects/mypolitics.jpg">
+						<p class="p--project">myPolitics</p>
+					</div>
+					<div onclick="showProjectInfo('mylibrary')" class="project animated wow zoomIn">
+						<img class="img--project" src="./img/projects/mylibrary.jpg">
+						<p class="p--project">myLibrary</p>
+					</div>
+				</div>
+				<div class="projects">
+					<div onclick="showProjectInfo('mini')" class="project animated wow zoomIn">
+						<img class="img--project" src="./img/projects/mini.jpg">
 						<p class="p--project">Mini</p>
-					</a>
-					<a href="https://github.com/TheAdrik/GroupAdmin" class="project animated wow zoomIn">
-						<img class="img--project" src="./img/projects/groupadmin.png">
+					</div>
+					<div onclick="showProjectInfo('groupadmin')" class="project animated wow zoomIn">
+						<img class="img--project" src="./img/projects/groupadmin.jpg">
 						<p class="p--project">GroupAdmin</p>
-					</a>
-					<a href="https://github.com/TheAdrik/theadrik.github.io" class="project animated wow zoomIn">
-						<img class="img--project" src="./img/projects/aoblog.png">
+					</div>
+					<div onclick="showProjectInfo('orlowblog')" class="project animated wow zoomIn">
+						<img class="img--project" src="./img/projects/aoblog.jpg">
 						<p class="p--project">Adrian Orłów Blog</p>
-					</a>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -156,7 +172,8 @@
 			<div class="section--container" style="padding: 5% 0;">
 				<h1 class="section--title">Umiejętności</h1>
 				<div class="section--separator"></div>
-				<p class="section--subtitle">Oto technologie, z których korzystam i znam w stopniu przynajmniej średniozaawansowanym.</p>
+				<p class="section--subtitle">Oto technologie, z których korzystam i znam w stopniu przynajmniej
+					średniozaawansowanym.</p>
 				<div class="skills">
 					<img class="skill animated wow bounceIn" src="./img/skills/js.png" alt="JavaScript">
 					<img class="skill animated wow bounceIn" src="./img/skills/css.png" alt="CSS">
@@ -176,7 +193,8 @@
 							<img class="img--article" src="./img/articles/0.png" alt="Odpowiedź na kłamliwą wypowiedź KE">
 							<div class="article__content">
 								<p class="article__title">Odpowiedź na kłamliwą wypowiedź KE</p>
-								<p class="article__lead">Merytoryczna i wyczerpująca odpowiedź na artykuł KEwPL pt. “Nie, nie zabierzemy Wam memów! #ACTA2 to #FAKENEWS!”</p>
+								<p class="article__lead">Merytoryczna i wyczerpująca odpowiedź na artykuł KEwPL pt. “Nie, nie zabierzemy Wam
+									memów! #ACTA2 to #FAKENEWS!”</p>
 								<div class="article__btn">Czytaj dalej</div>
 							</div>
 						</div>
@@ -186,7 +204,8 @@
 							<img class="img--article" src="./img/articles/1.png" alt="Patriotyzm gospodarczy - dlaczego nie?">
 							<div class="article__content">
 								<p class="article__title">Patriotyzm gospodarczy - dlaczego nie?</p>
-								<p class="article__lead">Głównym celem akcji typu “kupuj polskie” jest oczywiście tworzenie nowych miejsc pracy. W rzeczywistości jednak dzięki
+								<p class="article__lead">Głównym celem akcji typu “kupuj polskie” jest oczywiście tworzenie nowych miejsc
+									pracy. W rzeczywistości jednak dzięki
 									kupowaniu produktów krajowych...</p>
 								<div class="article__btn">Czytaj dalej</div>
 							</div>
@@ -197,7 +216,8 @@
 							<img class="img--article" src="./img/articles/2.png" alt="Cześć!">
 							<div class="article__content">
 								<p class="article__title">Cześć!</p>
-								<div class="article__lead">Oto pierwszy wpis na moim blogu. Będę publikował tutaj moje teksty poruszające bardzo wiele różnych tematów.</div>
+								<div class="article__lead">Oto pierwszy wpis na moim blogu. Będę publikował tutaj moje teksty poruszające
+									bardzo wiele różnych tematów.</div>
 								<div class="article__btn">Czytaj dalej</div>
 							</div>
 						</div>
@@ -263,6 +283,45 @@
 			</ul>
 		</footer>
 	</main>
+
+	<div class="modal--project block--none" id="modalProject">
+		<div class="project__header">
+			<div class="project__title text--center" id="projectName"></div>
+			<div class="project__close text--center" onclick="toggleProjectModal();"><i class="fas fa-times"></i></div>
+		</div>
+		<div class="project__container">
+			<div class="project__gallery">
+				<img src="" id="projectImg">
+				<div class="gallery__btns">
+					<i class="fas fa-angle-left" onclick="getImage('-1')"></i>
+					<i class="fas fa-angle-right" onclick="getImage('1')"></i>
+				</div>
+			</div>
+			<div class="project__info">
+				<div class="project__title--info" id="projectShortDesc"></div>
+				<div class="project__desc">
+					<p id="projectLongDesc"></p>
+					<div class="project__technologies" id="projectTechnologies"></div>
+				</div>
+
+				<div class="project__license">
+					<div class="project__license__title text--center">Licencja</div>
+					<div class="project__license__name text--center" id="projectLicense"></div>
+				</div>
+
+				<div class="project__btns">
+					<a class="project__btn project__btn--github text--center" id="projectSource" href="#">
+						<i class="fab fa-github"></i>
+						<p>Kod</p>
+					</a>
+					<a class="project__btn project__btn--demo text--center" id="projectDemo" href="#">
+						<p>Demo</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfKXRZXeuDipRrraTgKT2JAf5qqLqDQj4&callback=initMap">
 	</script>
 </body>
