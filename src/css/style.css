@@ -1254,8 +1254,11 @@ input:focus::-webkit-input-placeholder {
     transform: unset;
   }
   .project__info {
-    height: 100%;
+    height: auto;
     width: 90%;
+  }
+  .project__desc {
+    height: auto;
   }
   .project__license {
     margin-top: 1em;
@@ -1264,7 +1267,8 @@ input:focus::-webkit-input-placeholder {
     position: relative;
     margin-top: 1em;
     width: 100%;
-    bottom: 0;
+    margin-bottom: 4em;
+    margin-top: 2em;
   }
 }
 
