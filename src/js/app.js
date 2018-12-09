@@ -1,5 +1,24 @@
+// Change header class on scroll
+
+let scrollpos = window.scrollY
+const header = document.querySelector("header")
+const header_height = header.offsetHeight
+window.addEventListener('scroll', function () {
+    scrollpos = window.scrollY;
+    if (scrollpos >= header_height) {
+        header.classList.add("header--highlight")
+    } else {
+        header.classList.remove("header--highlight")
+    }
+})
+
+
+// SmoothScroll init
+
 var scroll = new SmoothScroll('a[href*="#"]');
 new WOW().init();
+
+// GA init
 
 window.dataLayer = window.dataLayer || [];
 
@@ -10,6 +29,8 @@ gtag('js', new Date());
 
 gtag('config', 'UA-51375799-4');
 
+
+// Map init
 
 function initMap() {
     var city = {
@@ -33,6 +54,8 @@ function initMap() {
     });
 }
 
+// Projects modal init
+
 function toggleNav() {
     var hC = document.querySelector(".nav--hamburger__content").classList;
     var hB = document.querySelector(".hamburger--btn").classList;
@@ -51,7 +74,7 @@ var values = [
     "projectLicense", "projectSource", "projectDemo",
     "projectTechnologies", "body"
 ];
-values.forEach(value => {
+values.forEach(function (value) {
     var value = document.getElementById(value);
 });
 
@@ -61,7 +84,7 @@ var projects = [{
     "shortDesc": "System ogłoszeń internetowych",
     "longDesc": "Podstawową funkcjonalnością jest możliwość wstawiania i wyświetlania ogłoszeń sprzedaży przedmiotów wraz ze zdjęciem, za pomocą własnego profilu, którego można utworzyć za pomocą zwykłej rejestracji (email/hasło) lub przez Facebooka.\n\nW vLocal wbudowany jest system wiadomości pomiędzy sprzedającym/kupującym oraz wyświetlanie ich statusów (online/offline).\n\nMożliwe jest wyszukiwanie ofert sprzedaży na podstawie podanych kryteriów.\n\nProjekt był wzorowany na największych polskich i zagranicznych portalach aukcyjnych.",
     "license": "MIT",
-    "sourceLink": "https://github.com/TheAdrik/vLocal",
+    "sourceLink": "https://github.com/AdrianOrlow/vLocal",
     "demoLink": "http://bit.ly/vLocal",
     "technologies": ["firebase", "vue", "css"]
 }, {
@@ -70,7 +93,7 @@ var projects = [{
     "shortDesc": "Test poglądów politycznych",
     "longDesc": "Wzorowany na takich jak 8values czy PolitiScales. Na podstawie odpowiedzi na pytania dotyczące różnych kwestii wylicza poziom zbliżenia do danych ideologii i przedstawia go na siedmiu osiach oraz w formie tekstowej, czyli tzw. najbliższego dopasowania.\n\nJest możliwość realistycznego generowania odpowiedzi oraz wyświetlania efektów pytań.\n\nW wersji beta zawiera się dodatkowo pokazywanie miejsca na kompasie politycznym oraz \"cechy\", które może przejawiać osoba wypełniająca quiz.",
     "license": "MIT",
-    "sourceLink": "https://github.com/TheAdrik/myPolitics",
+    "sourceLink": "https://github.com/AdrianOrlow/myPolitics",
     "demoLink": "https://mypolitics.orlow.me/",
     "technologies": ["js", "css"]
 }, {
@@ -79,7 +102,7 @@ var projects = [{
     "shortDesc": "System katalogu bibliotecznego",
     "longDesc": "Po zaimplementowaniu ułatwia wyszukiwanie i zarządzanie zasobami biblioteki. Zawiera w sobie panel administratora, poprzez który można edytować, usuwać i dodawać książki.\n\nDane logowania do demo:\nLogin: zvpsbpmf@q.cb, hasło: SJZB4Agw",
     "license": "MIT",
-    "sourceLink": "https://github.com/TheAdrik/myLibrary",
+    "sourceLink": "https://github.com/AdrianOrlow/myLibrary",
     "demoLink": "https://bit.ly/2KAgE55",
     "technologies": ["firebase", "vue", "css"]
 }, {
@@ -88,7 +111,7 @@ var projects = [{
     "shortDesc": "Ultraminimalistyczny template strony osobistej",
     "longDesc": "Szablon strony z elementami i obciążeniami ograniczonymi do całkowitego minimum",
     "license": "MIT",
-    "sourceLink": "https://github.com/TheAdrik/Mini",
+    "sourceLink": "https://github.com/AdrianOrlow/Mini",
     "demoLink": "https://bit.ly/2LdqtXV",
     "technologies": ["css"]
 }, {
@@ -97,7 +120,7 @@ var projects = [{
     "shortDesc": "Menadżer blokad",
     "longDesc": "Stworzony z myślą o zarządzeniu grupą \"Nastoletni Programiści\" na Facebooku. Wysyłał podane dane do predefiniowanego formularza, jednak obecnie, ze względu na zmiany w polityce Google, nie działa.",
     "license": "MIT",
-    "sourceLink": "https://github.com/TheAdrik/GroupAdmin",
+    "sourceLink": "https://github.com/AdrianOrlow/GroupAdmin",
     "demoLink": "javascript:void(0);",
     "technologies": ["jquery", "nodejs"]
 }, {
@@ -106,7 +129,7 @@ var projects = [{
     "shortDesc": "Mój blog osobisty",
     "longDesc": "Wyrażam na nim swoją opinię na bardzo różne tematy. Próbuję stosować język prosty i bezpośredni, zrozumiały dla każdego i przyjemny do czytania o każdej porze dnia.",
     "license": "MIT",
-    "sourceLink": "https://github.com/TheAdrik/theadrik.github.io",
+    "sourceLink": "https://github.com/AdrianOrlow/AdrianOrlow.github.io",
     "demoLink": "http://blog.orlow.me",
     "technologies": ["jekyll", "css"]
 }, {
@@ -115,7 +138,7 @@ var projects = [{
     "shortDesc": "Wiadomości w jednym miejscu",
     "longDesc": "Zaprojektowany z myślą o uczniach, których nauczyciele wiedzy o społeczeństwie wymagają pisania tzw. prasówek, czyli najnowszych, skróconych wiadomości z wybranych dziedzin. Ta aplikacja ten proces całkowicie ułatwia, działa na zasadzie czytnika RSS.",
     "license": "MIT",
-    "sourceLink": "https://github.com/TheAdrik/short-news",
+    "sourceLink": "https://github.com/AdrianOrlow/short-news",
     "demoLink": "https://short-news.herokuapp.com/",
     "technologies": ["go", "css"]
 }, {
@@ -124,7 +147,7 @@ var projects = [{
     "shortDesc": "Szkolny bot",
     "longDesc": "Pierwotnie zaprojektowany dla mojej klasy, obecnie możliwy do zaimplementowania w każdym oddziale CKZiU w Jaworznie. Ma ogrom funkcjonalności, są to m.in. zapisywanie i odczytywanie wydarzeń (np. zadań domowych, sprawdzianów) na dany dzień, podawanie najbliższych odjazdów autobusów, wysyłanie danych logowania do emaila klasowego, obecnej i następnej lekcji (+ czas jaki pozostał do końca), planu lekcji na podstawie Librusa i w formie zrzutu ekranu, liczenie działań matematycznych z pomocą Wolfram Alpha i wiele innych.",
     "license": "MIT",
-    "sourceLink": "https://github.com/TheAdrik/SchoolBot",
+    "sourceLink": "https://github.com/AdrianOrlow/SchoolBot",
     "demoLink": "javascript:void(0);",
     "technologies": ["nodejs"]
 }, {
@@ -133,7 +156,7 @@ var projects = [{
     "shortDesc": "Aplikacja ułatwiająca zarządzanie lekami",
     "longDesc": "Stworzona na ogólnopolski konkurs Hack Heroes, maksymalnie ułatwia zarządzanie lekami (możliwość ich prostego skanowania, szukania, porównywania), sprawdzanie czy są refundowane, szukanie aptek w swoim otoczeniu oraz monitorowanie jakości powietrza na zewnątrz.",
     "license": "MIT",
-    "sourceLink": "https://github.com/TheAdrik/moje-zdrowie",
+    "sourceLink": "https://github.com/AdrianOrlow/moje-zdrowie",
     "demoLink": "https://moje-zdrowie.herokuapp.com/",
     "technologies": ["go", "css"]
 }]
@@ -184,7 +207,7 @@ function toggleProjectModal() {
 }
 
 function showProjectInfo(name) {
-    projects.forEach(el => {
+    projects.forEach(function (el) {
         if (el.id == name) {
             projectTechnologies.innerHTML = "";
             projectName.innerHTML = el.name;
@@ -195,18 +218,18 @@ function showProjectInfo(name) {
             projectSource.href = el.sourceLink;
             projectDemo.href = el.demoLink;
 
-            projectImg.src = `img/projects/${el.id}/0.jpg`
+            projectImg.src = 'img/projects/' + el.id + '/0.jpg';
             projectImg.setAttribute("value", "0");
             projectImg.setAttribute("project", el.id);
 
-            el.technologies.forEach(projectTech => {
-                technologies.forEach(tech => {
+            el.technologies.forEach(function (projectTech) {
+                technologies.forEach(function (tech) {
                     if (projectTech == tech.id) {
                         let newEl = document.createElement("a");
                         newEl.href = tech.link;
                         newEl.title = tech.name;
                         let newImg = document.createElement("img");
-                        newImg.src = `img/technologies/${tech.id}.jpg`
+                        newImg.src = 'img/technologies/' + tech.id + '.jpg';
                         newEl.appendChild(newImg);
                         projectTechnologies.appendChild(newEl);
                     }
@@ -235,13 +258,13 @@ function getImage(val) {
     let newVal = valNow + JSON.parse(val);
 
     if (newVal >= 0) {
-        let newSrc = `img/projects/${projectName}/${newVal}.jpg`;
+        let newSrc = 'img/projects/' + projectName + '/' + newVal + '.jpg';
         checkImageExists(newSrc, function (imageExists) {
             if (imageExists) {
                 projectImg.src = newSrc;
                 projectImg.setAttribute("value", JSON.stringify(newVal));
             } else {
-                projectImg.src = `img/projects/${projectName}/0.jpg`;
+                projectImg.src = 'img/projects/' + projectName + '/0.jpg';
                 projectImg.setAttribute("value", "0");
             }
         });

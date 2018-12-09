@@ -5,11 +5,11 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="theme-color" content="#fafafa">
-	<meta property="og:url" content="http://orlow.me">
+	<meta property="og:url" content="https://orlow.me">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Adrian Orłów">
 	<meta property="og:description" content="Programista i działacz polityczny">
-	<meta property="og:image" content="http://orlow.me/img/thumbnails/main.png">
+	<meta property="og:image" content="https://orlow.me/img/thumbnails/main.png">
 	<title>Adrian Orłów</title>
 
 	<!-- Google Analytics -->
@@ -29,10 +29,6 @@
 	<link rel="stylesheet" href="src/css/animate.css">
 	<script src="src/js/wow.min.js"></script>
 
-	<!-- App scripts -->
-	<script src="dist/js/app.min.js"></script>
-	<!--<script src="src/js/app.js"></script>-->
-
 	<!-- FontAwesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
 	 crossorigin="anonymous">
@@ -49,21 +45,21 @@
 			</h1>
 			<nav class="header--nav">
 				<ul class="nav--list">
-					<li class="nav--element">
-						<a class="nav--link" data-scroll href="#about">o mnie</a>
-					</li>
-					<li class="nav--element">
-						<a class="nav--link" data-scroll href="#projects">projekty</a>
-					</li>
-					<li class="nav--element">
-						<a class="nav--link" data-scroll href="#blog">blog</a>
-					</li>
-					<li class="nav--element">
-						<a class="nav--link" data-scroll href="#skills">umiejętności</a>
-					</li>
-					<li class="nav--element">
-						<a class="nav--link link--last" data-scroll href="#contact">kontakt</a>
-					</li>
+					<a class="nav__el" data-scroll href="#about">
+						<span class="nav--link">o mnie</span>
+					</a>
+					<a class="nav__el" data-scroll href="#projects">
+						<span class="nav--link">projekty</span>
+					</a>
+					<a class="nav__el" data-scroll href="#blog">
+						<span class="nav--link">blog</span>
+					</a>
+					<a class="nav__el" data-scroll href="#skills">
+						<span class="nav--link">umiejętności</span>
+					</a>
+					<a class="nav__el nav__el--last" data-scroll href="#contact">
+						<span class="nav--link link--last">kontakt</span>
+					</a>
 				</ul>
 			</nav>
 			<div class="nav--hamburger hidden">
@@ -87,13 +83,11 @@
 	<main id="main">
 		<section class="section section__hero">
 			<div class="section--container container--hero">
-				<p class="hero--intro animated fadeIn">Cześć, jestem:</p>
+				<p class="hero--intro animated fadeIn">Cześć, jestem</p>
 				<h1 class="hero--title animated fadeIn">Adrian Orłów</h1>
-				<p class="hero--subtitle animated jackInTheBox" style="animation-delay: 250ms">Programuję, piszę artykuły, a także
-					działam politycznie.</p>
 
-				<div class="animated fadeInUp delay-1s">
-					<a class="hero__btn" data-scroll href="#about">Dowiedz się więcej</a>
+				<div class="container--hero__btn animated fadeInUp delay-1s">
+					<a class="hero__btn" data-scroll href="#about">Poznaj mnie</a>
 				</div>
 			</div>
 		</section>
@@ -101,20 +95,18 @@
 			<div class="section--container" style="padding: 10% 0;">
 				<h1 class="section--title">O mnie</h1>
 				<div class="section--separator"></div>
-				<p class="section--subtitle">Trochę na mój temat. Kliknij na obrazek, aby dowiedzieć się więcej.</p>
+				<p class="section--subtitle">Nieco na mój temat. Kliknij, aby dowiedzieć się więcej.</p>
 				<div class="about">
-					<a class="about__el animated wow fadeInDown" data-scroll href="#projects">
-						<img class="img--about" src="./img/about/programming.png">
-						<p class="p--about">Programuję</p>
-					</a>
-					<a class="about__el animated wow fadeInDown" style="animation-delay: 500ms" data-scroll href="#blog">
-						<img class="img--about" src="./img/about/writing.jpg">
-						<p class="p--about">Prowadzę bloga</p>
-					</a>
-					<a class="about__el animated wow fadeInDown" style="animation-delay: 750ms" href="https://www.facebook.com/TheAdrik">
-						<img class="img--about" src="./img/about/politics.jpg">
-						<p class="p--about">Działam politycznie</p>
-					</a>
+					<div class="about__container">
+						<a class="about--el wow fadeInLeft animated" data-scroll href="#projects">
+							<img src="./img/about/programming.png">
+							<span>Programuję</span>
+						</a>
+						<a class="about--el wow fadeInRight animated" data-scroll href="#blog">
+							<img src="./img/about/writing.jpg">
+							<span>Bloguję</span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -122,7 +114,8 @@
 			<div class="section--container">
 				<h1 class="section--title">Projekty</h1>
 				<div class="section--separator" style="background: #222"></div>
-				<p class="section--subtitle" style="color: #737373;">Poniżej znajdują się projekty stworzone przeze mnie w ciągu
+				<p class="section--subtitle" style="color: #737373;">Poniżej znajdują się projekty stworzone przeze mnie w
+					przeciągu
 					ostatnich kilku miesięcy.</p>
 				<div class="projects">
 					<div onclick="showProjectInfo('short-news')" class="project animated wow zoomIn">
@@ -172,13 +165,12 @@
 			<div class="section--container" style="padding: 5% 0;">
 				<h1 class="section--title">Umiejętności</h1>
 				<div class="section--separator"></div>
-				<p class="section--subtitle">Oto technologie, z których korzystam i znam w stopniu przynajmniej
-					średniozaawansowanym.</p>
+				<p class="section--subtitle">Oto technologie, z których korzystam w największej części moich projektów.</p>
 				<div class="skills">
-					<img class="skill animated wow bounceIn" src="./img/skills/js.png" alt="JavaScript">
-					<img class="skill animated wow bounceIn" src="./img/skills/css.png" alt="CSS">
-					<img class="skill animated wow bounceIn" src="./img/skills/vue.png" alt="Vue">
-					<img class="skill animated wow bounceIn" src="./img/skills/electron.png" alt="Electron">
+					<img class="skill animated wow bounceIn" src="./img/skills/js.png" title="JavaScript">
+					<img class="skill animated wow bounceIn" src="./img/skills/css.png" title="CSS">
+					<img class="skill animated wow bounceIn" src="./img/skills/vue.png" title="Vue">
+					<img class="skill animated wow bounceIn" src="./img/skills/golang.png" title="Go">
 				</div>
 			</div>
 		</section>
@@ -190,7 +182,7 @@
 				<div class="articles">
 					<a href="http://blog.orlow.me/acta2-fakenews">
 						<div class="article animated wow fadeInUp">
-							<img class="img--article" src="./img/articles/0.png" alt="Odpowiedź na kłamliwą wypowiedź KE">
+							<img class="img--article" src="./img/articles/0.png" title="Odpowiedź na kłamliwą wypowiedź KE">
 							<div class="article__content">
 								<p class="article__title">Odpowiedź na kłamliwą wypowiedź KE</p>
 								<p class="article__lead">Merytoryczna i wyczerpująca odpowiedź na artykuł KEwPL pt. “Nie, nie zabierzemy Wam
@@ -201,7 +193,7 @@
 					</a>
 					<a href="http://blog.orlow.me/patriotyzm-gospodarczy">
 						<div class="article animated wow fadeInUp">
-							<img class="img--article" src="./img/articles/1.png" alt="Patriotyzm gospodarczy - dlaczego nie?">
+							<img class="img--article" src="./img/articles/1.png" title="Patriotyzm gospodarczy - dlaczego nie?">
 							<div class="article__content">
 								<p class="article__title">Patriotyzm gospodarczy - dlaczego nie?</p>
 								<p class="article__lead">Głównym celem akcji typu “kupuj polskie” jest oczywiście tworzenie nowych miejsc
@@ -213,7 +205,7 @@
 					</a>
 					<a href="http://blog.orlow.me/pierwszy-wpis">
 						<div class="article animated wow fadeInUp">
-							<img class="img--article" src="./img/articles/2.png" alt="Cześć!">
+							<img class="img--article" src="./img/articles/2.png" title="Cześć!">
 							<div class="article__content">
 								<p class="article__title">Cześć!</p>
 								<div class="article__lead">Oto pierwszy wpis na moim blogu. Będę publikował tutaj moje teksty poruszające
@@ -254,23 +246,23 @@
 		</section>
 		<footer class="footer">
 			<ul class="footer__links">
-				<a href="https://goo.gl/U6psDG">
+				<a href="http://bit.ly/aorlowTT">
 					<li>
 
 						<i class="fab fa-twitter"></i>
 					</li>
 				</a>
-				<a href="https://goo.gl/XtacYL">
+				<a href="http://bit.ly/aorlowFB">
 					<li>
 						<i class="fab fa-facebook-f"></i>
 					</li>
 				</a>
-				<a href="https://goo.gl/9tqwYZ">
+				<a href="http://bit.ly/aorlowGH">
 					<li>
 						<i class="fab fa-github"></i>
 					</li>
 				</a>
-				<a href="https://goo.gl/93tmGX">
+				<a href="http://bit.ly/aorlowTM">
 					<li>
 						<i class="fab fa-telegram-plane"></i>
 					</li>
@@ -322,6 +314,10 @@
 		</div>
 	</div>
 
+	<!-- App scripts -->
+	<script src="dist/js/app.min.js"></script>
+	<!--<script src="src/js/app.js"></script>-->
+	<!-- GA -->
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfKXRZXeuDipRrraTgKT2JAf5qqLqDQj4&callback=initMap">
 	</script>
 </body>
