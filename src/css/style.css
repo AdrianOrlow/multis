@@ -293,7 +293,6 @@ input:focus::-webkit-input-placeholder {
   text-transform: uppercase;
   font-size: 0.6em;
   color: #222;
-  display: flex;
 }
 
 .link--last {
@@ -303,11 +302,13 @@ input:focus::-webkit-input-placeholder {
   color: #fafafa;
   transition: 0.2s ease-in-out;
   display: unset;
+  border: 3px solid #222;
 }
 
 .link--last:hover {
-  background: #444;
-  border: none;
+  border: 3px solid #222;
+  background: none;
+  color: #222;
 }
 
 /* Hamburger Menu */
@@ -558,7 +559,8 @@ input:focus::-webkit-input-placeholder {
   margin: 0 auto;
   padding: 0;
   height: 100%;
-  width: 50%;
+  width: 100%;
+  max-width: 700px;
 }
 
 .about--el {
@@ -597,37 +599,6 @@ input:focus::-webkit-input-placeholder {
   color: #111;
   box-shadow: 0 5px 20px -1px rgba(68, 68, 68, .4);
 }
-
-/* .about__el {
-  cursor: pointer;
-  height: auto;
-  width: 13em;
-}
-
-.about__el:hover .img--about {
-  border: 5px solid #ececec;
-}
-
-.about__el:active .img--about {
-  border: 5px solid #fff;
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-}
-
-.img--about {
-  border-radius: 100%;
-  height: 10em;
-  width: auto;
-  transition: 0.2s;
-  border: 5px solid rgba(0, 0, 0, 0);
-}
-
-.p--about {
-  font-size: 1.2em;
-  margin-top: 1em;
-  font-weight: 600;
-  color: #ececec;
-} */
 
 /* Projects */
 
@@ -718,6 +689,10 @@ input:focus::-webkit-input-placeholder {
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.07);
 }
 
+.article:hover .article__btn {
+  color: #222;
+}
+
 .img--article {
   max-width: 100%;
 }
@@ -745,6 +720,7 @@ input:focus::-webkit-input-placeholder {
   margin-top: 1em;
   text-align: left;
   font-size: 1.1em;
+  line-height: 20px;
 }
 
 .article__btn {
@@ -752,6 +728,8 @@ input:focus::-webkit-input-placeholder {
   text-align: left;
   margin-top: 2em;
   color: #5a5a5a;
+  line-height: 20px;
+  transition: .2s ease-in-out;
 }
 
 /* Contact */
@@ -1238,11 +1216,11 @@ input:focus::-webkit-input-placeholder {
 
   .about {
     display: block;
+    width: 20em;
   }
 
   .about__container {
     display: unset;
-    width: 100%;
   }
 
   .about--el {
