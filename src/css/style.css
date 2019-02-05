@@ -169,6 +169,49 @@ button {
   padding: 0;
 }
 
+/* Fonts */
+
+/* montserrat-regular - latin_latin-ext */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../dist/fonts/montserrat-v12-latin_latin-ext-regular.eot"); /* IE9 Compat Modes */
+  src: local("Montserrat Regular"), local("Montserrat-Regular"),
+    url("../../dist/fonts/montserrat-v12-latin_latin-ext-regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../dist/fonts/montserrat-v12-latin_latin-ext-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../../dist/fonts/montserrat-v12-latin_latin-ext-regular.woff") format("woff"),
+    /* Modern Browsers */ url("../../dist/fonts/montserrat-v12-latin_latin-ext-regular.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../../dist/fonts/montserrat-v12-latin_latin-ext-regular.svg#Montserrat")
+      format("svg"); /* Legacy iOS */
+}
+/* montserrat-600 - latin_latin-ext */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../dist/fonts/montserrat-v12-latin_latin-ext-600.eot"); /* IE9 Compat Modes */
+  src: local("Montserrat SemiBold"), local("Montserrat-SemiBold"),
+    url("../../dist/fonts/montserrat-v12-latin_latin-ext-600.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../dist/fonts/montserrat-v12-latin_latin-ext-600.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../../dist/fonts/montserrat-v12-latin_latin-ext-600.woff") format("woff"),
+    /* Modern Browsers */ url("../../dist/fonts/montserrat-v12-latin_latin-ext-600.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../../dist/fonts/montserrat-v12-latin_latin-ext-600.svg#Montserrat") format("svg"); /* Legacy iOS */
+}
+/* montserrat-700 - latin_latin-ext */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../dist/fonts/montserrat-v12-latin_latin-ext-700.eot"); /* IE9 Compat Modes */
+  src: local("Montserrat Bold"), local("Montserrat-Bold"),
+    url("../../dist/fonts/montserrat-v12-latin_latin-ext-700.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../dist/fonts/montserrat-v12-latin_latin-ext-700.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../../dist/fonts/montserrat-v12-latin_latin-ext-700.woff") format("woff"),
+    /* Modern Browsers */ url("../../dist/fonts/montserrat-v12-latin_latin-ext-700.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../../dist/fonts/montserrat-v12-latin_latin-ext-700.svg#Montserrat") format("svg"); /* Legacy iOS */
+}
+
 /* Basic */
 
 body {
@@ -221,6 +264,16 @@ input:focus::-webkit-input-placeholder {
   width: 100%;
   z-index: 2;
 }
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 /* Header */
 
@@ -256,7 +309,7 @@ input:focus::-webkit-input-placeholder {
 
 .header--title {
   font-size: 0.8em;
-  letter-spacing: -.5px;
+  letter-spacing: -0.5px;
 }
 
 .header--nav {
@@ -276,9 +329,9 @@ input:focus::-webkit-input-placeholder {
 
 .nav__el {
   display: inline;
-  padding: 0 .3em;
+  padding: 0 0.3em;
   cursor: pointer;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .nav__el:hover {
@@ -297,7 +350,7 @@ input:focus::-webkit-input-placeholder {
 
 .link--last {
   padding: 0.3em 0.66em;
-  border-radius: .25em;
+  border-radius: 0.25em;
   background: #222;
   color: #fafafa;
   transition: 0.2s ease-in-out;
@@ -488,7 +541,7 @@ input:focus::-webkit-input-placeholder {
 
 .hero--intro {
   text-align: left;
-  margin-bottom: .1em;
+  margin-bottom: 0.1em;
   font-size: 1.8em;
   font-weight: 600;
 }
@@ -497,7 +550,7 @@ input:focus::-webkit-input-placeholder {
   font-family: "Montserrat", sans-serif;
   font-size: 5em;
   font-weight: 700;
-  letter-spacing: -.035em;
+  letter-spacing: -0.035em;
   line-height: 1em;
 }
 
@@ -519,9 +572,9 @@ input:focus::-webkit-input-placeholder {
   border: 3px solid #222;
   font-weight: 600;
   font-size: 1em;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
   color: #fafafa;
-  border-radius: .25em;
+  border-radius: 0.25em;
 }
 
 .hero__btn:hover {
@@ -583,13 +636,13 @@ input:focus::-webkit-input-placeholder {
   left: 0;
   width: 100%;
   z-index: 0;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .about--el span {
   font-size: 1.2em;
-  padding: .5em;
-  border-radius: .25em;
+  padding: 0.5em;
+  border-radius: 0.25em;
   background: #fafafa;
   position: absolute;
   left: 50%;
@@ -597,7 +650,7 @@ input:focus::-webkit-input-placeholder {
   transform: translate(-50%, -50%);
   z-index: 10;
   color: #111;
-  box-shadow: 0 5px 20px -1px rgba(68, 68, 68, .4);
+  box-shadow: 0 5px 20px -1px rgba(68, 68, 68, 0.4);
 }
 
 /* Projects */
@@ -729,7 +782,7 @@ input:focus::-webkit-input-placeholder {
   margin-top: 2em;
   color: #5a5a5a;
   line-height: 20px;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 /* Contact */
@@ -810,7 +863,7 @@ input:focus::-webkit-input-placeholder {
   cursor: pointer;
   -webkit-box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.07);
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.07);
-  width: 15%;
+  width: auto;
   transition: 0.2s ease-in-out;
   border-radius: 2px;
   font-weight: 700;
@@ -823,7 +876,7 @@ input:focus::-webkit-input-placeholder {
 .contact input,
 .contact textarea,
 .contact button {
-  border-radius: .25em;
+  border-radius: 0.25em;
 }
 
 /* Icon */
@@ -840,7 +893,7 @@ input:focus::-webkit-input-placeholder {
   text-transform: none !important;
 }
 
-.icon>.label {
+.icon > .label {
   display: none;
 }
 
@@ -878,9 +931,8 @@ input:focus::-webkit-input-placeholder {
   background: #222;
 }
 
-.footer__links a li i {
-  color: #ececec;
-  text-decoration: none;
+.footer__links a li img {
+  height: 1em;
 }
 
 .footer__links a:last-child li {
@@ -920,11 +972,13 @@ input:focus::-webkit-input-placeholder {
 
 .project__close {
   width: 10%;
-  font-size: 1.5em;
   background: #eaeaea;
   font-weight: 600;
-  font-family: FontAwesome;
   cursor: pointer;
+}
+
+.project__close img {
+  height: 1.5em;
 }
 
 .project__container {
@@ -981,7 +1035,8 @@ input:focus::-webkit-input-placeholder {
   cursor: pointer;
 }
 
-.project__btn i {
+.project__btn img {
+  height: 1em;
   margin-right: 0.5em;
 }
 
@@ -1038,19 +1093,34 @@ input:focus::-webkit-input-placeholder {
   padding: 0 5%;
   display: flex;
   justify-content: space-between;
-  font-size: 2em;
   opacity: 0.8;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 1;
 }
 
-.project__gallery img {
+.gallery__btns img {
+  height: 2em;
+  cursor: pointer;
+}
+
+.project__gallery .gallery__img {
   width: auto;
   height: 100%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 1;
+}
+
+.gallery__spinner {
+  -webkit-animation: rotate 1.5s linear infinite;
+  animation: rotate 1.5s linear infinite;
+  height: 4em;
+  position: absolute;
+  top: calc(50% - 2em);
+  left: calc(50% - 2em);
 }
 
 .gallery__btns i {
@@ -1195,7 +1265,7 @@ input:focus::-webkit-input-placeholder {
   }
 
   .hero--intro {
-    font-size: 1.3em;
+    font-size: 2.6em;
   }
 
   .container--hero__btn {
@@ -1203,7 +1273,7 @@ input:focus::-webkit-input-placeholder {
   }
 
   .hero__btn {
-    padding: .7em;
+    padding: 0.7em;
   }
 
   .footer {
@@ -1315,7 +1385,7 @@ input:focus::-webkit-input-placeholder {
     overflow: unset;
   }
 
-  .project__gallery img {
+  .project__gallery .gallery__img {
     position: relative;
     top: unset;
     transform: unset;

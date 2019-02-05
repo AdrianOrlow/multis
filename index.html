@@ -1,321 +1,519 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="pl-PL">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fafafa" />
+    <meta property="og:url" content="https://orlow.me" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Adrian Orłów" />
+    <meta property="og:description" content="Programista i libertarianin" />
+    <meta
+      property="og:image"
+      content="https://orlow.me/img/thumbnails/main.png"
+    />
+    <title>Adrian Orłów</title>
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="theme-color" content="#fafafa">
-	<meta property="og:url" content="https://orlow.me">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="Adrian Orłów">
-	<meta property="og:description" content="Programista i libertarianin">
-	<meta property="og:image" content="https://orlow.me/img/thumbnails/main.png">
-	<title>Adrian Orłów</title>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-51375799-4"
+    ></script>
 
-	<!-- Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-51375799-4"></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/ico/favicon.ico" />
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="img/ico/favicon.ico">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="dist/css/style.min.css" />
+    <!--<link rel="stylesheet" href="src/css/style.css" />-->
 
-	<!-- Main CSS -->
-	<link rel="stylesheet" href="dist/css/style.min.css" />
-	<!--<link rel="stylesheet" href="src/css/style.css" />-->
+    <!-- Smooth Scroll -->
+    <script src="dist/js/scroll.js"></script>
 
-	<!-- Smooth Scroll -->
-	<script src="dist/js/scroll.js"></script>
+    <!-- Animations -->
+    <link rel="stylesheet" href="src/css/animate.css" />
+    <script src="src/js/wow.min.js"></script>
+  </head>
 
-	<!-- Animations -->
-	<link rel="stylesheet" href="src/css/animate.css">
-	<script src="src/js/wow.min.js"></script>
+  <body id="body">
+    <header class="header" id="header">
+      <div class="header--container">
+        <h1 class="header--title">
+          Adrian Orłów
+        </h1>
+        <nav class="header--nav">
+          <ul class="nav--list">
+            <a class="nav__el" data-scroll href="#about">
+              <span class="nav--link">o mnie</span>
+            </a>
+            <a class="nav__el" data-scroll href="#projects">
+              <span class="nav--link">projekty</span>
+            </a>
+            <a class="nav__el" data-scroll href="#blog">
+              <span class="nav--link">blog</span>
+            </a>
+            <a class="nav__el" data-scroll href="#skills">
+              <span class="nav--link">umiejętności</span>
+            </a>
+            <a class="nav__el nav__el--last" data-scroll href="#contact">
+              <span class="nav--link link--last">kontakt</span>
+            </a>
+          </ul>
+        </nav>
+        <div class="nav--hamburger hidden">
+          <div href="#" class="hamburger--btn" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div
+            class="nav--hamburger__content hidden animated fadeInDown faster"
+          >
+            <a
+              class="hamburger--link"
+              data-scroll
+              onclick="toggleNav()"
+              href="#about"
+              >o mnie</a
+            >
+            <a
+              class="hamburger--link"
+              data-scroll
+              onclick="toggleNav()"
+              href="#projects"
+              >projekty</a
+            >
+            <a
+              class="hamburger--link"
+              data-scroll
+              onclick="toggleNav()"
+              href="#skills"
+              >umiejętności</a
+            >
+            <a
+              class="hamburger--link"
+              data-scroll
+              onclick="toggleNav()"
+              href="#blog"
+              >blog</a
+            >
+            <a
+              class="hamburger--link"
+              data-scroll
+              onclick="toggleNav()"
+              href="#contact"
+              >kontakt</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
 
-	<!-- FontAwesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-	 crossorigin="anonymous">
+    <main id="main">
+      <section class="section section__hero">
+        <div class="section--container container--hero">
+          <p class="hero--intro animated fadeIn">Cześć, jestem</p>
+          <h1 class="hero--title animated fadeIn">Adrian Orłów</h1>
 
-	<!-- Fonts -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900">
-</head>
+          <div class="container--hero__btn animated fadeInUp delay-1s">
+            <a class="hero__btn" data-scroll href="#about">Poznaj mnie</a>
+          </div>
+        </div>
+      </section>
+      <section class="section section__dark" id="about">
+        <div class="section--container">
+          <h1 class="section--title">O mnie</h1>
+          <div class="section--separator"></div>
+          <p class="section--subtitle">
+            Nieco na mój temat. Kliknij, aby dowiedzieć się więcej.
+          </p>
+          <div class="about">
+            <div class="about__container">
+              <a
+                aria-label="Programuję"
+                class="about--el wow pulse animated"
+                data-scroll
+                href="#projects"
+              >
+                <img src="./img/about/programming.png" />
+                <span>Programuję</span>
+              </a>
+              <a
+                aria-label="Bloguję"
+                class="about--el wow pulse animated"
+                data-scroll
+                href="#blog"
+              >
+                <img src="./img/about/writing.jpg" />
+                <span>Bloguję</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="section section__light"
+        id="projects"
+        style="padding: 5% 0;"
+      >
+        <div class="section--container">
+          <h1 class="section--title">Projekty</h1>
+          <div class="section--separator" style="background: #222"></div>
+          <p class="section--subtitle" style="color: #737373;">
+            Poniżej znajdują się projekty stworzone przeze mnie w przeciągu
+            ostatnich kilku miesięcy.
+          </p>
+          <div class="projects">
+            <div
+              aria-label="Informacje o projekcie ShortNews"
+              onclick="showProjectInfo('short-news')"
+              class="project animated wow zoomIn"
+            >
+              <img class="img--project" src="./img/projects/short-news.jpg" />
+              <p class="p--project">ShortNews</p>
+            </div>
+            <div
+              aria-label="Informacje o projekcie SchoolBot"
+              onclick="showProjectInfo('schoolbot')"
+              class="project animated wow zoomIn"
+            >
+              <img class="img--project" src="./img/projects/schoolbot.jpg" />
+              <p class="p--project">SchoolBot</p>
+            </div>
+            <div
+              aria-label="Informacje o projekcie Moje Zdrowie"
+              onclick="showProjectInfo('moje-zdrowie')"
+              class="project animated wow zoomIn"
+            >
+              <img class="img--project" src="./img/projects/moje-zdrowie.jpg" />
+              <p class="p--project">Moje Zdrowie</p>
+            </div>
+          </div>
+          <div class="projects">
+            <div
+              aria-label="Informacje o projekcie vLocal"
+              onclick="showProjectInfo('vlocal')"
+              class="project animated wow zoomIn"
+            >
+              <img class="img--project" src="./img/projects/vlocal.jpg" />
+              <p class="p--project">vLocal</p>
+            </div>
+            <div
+              aria-label="Informacje o projekcie myPolitics"
+              onclick="showProjectInfo('mypolitics')"
+              class="project animated wow zoomIn"
+            >
+              <img class="img--project" src="./img/projects/mypolitics.jpg" />
+              <p class="p--project">myPolitics</p>
+            </div>
+            <div
+              aria-label="Informacje o projekcie myLibrary"
+              onclick="showProjectInfo('mylibrary')"
+              class="project animated wow zoomIn"
+            >
+              <img class="img--project" src="./img/projects/mylibrary.jpg" />
+              <p class="p--project">myLibrary</p>
+            </div>
+          </div>
+          <div class="projects">
+            <div
+              aria-label="Informacje o projekcie Mini"
+              onclick="showProjectInfo('mini')"
+              class="project animated wow zoomIn"
+            >
+              <img class="img--project" src="./img/projects/mini.jpg" />
+              <p class="p--project">Mini</p>
+            </div>
+            <div
+              aria-label="Informacje o projekcie GroupAdmin"
+              onclick="showProjectInfo('groupadmin')"
+              class="project animated wow zoomIn"
+            >
+              <img class="img--project" src="./img/projects/groupadmin.jpg" />
+              <p class="p--project">GroupAdmin</p>
+            </div>
+            <div
+              aria-label="Informacje o projekcie Adrian Orłów Blog"
+              onclick="showProjectInfo('orlowblog')"
+              class="project animated wow zoomIn"
+            >
+              <img class="img--project" src="./img/projects/aoblog.jpg" />
+              <p class="p--project">Adrian Orłów Blog</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section__dark" id="skills">
+        <div class="section--container" style="padding: 5% 0;">
+          <h1 class="section--title">Umiejętności</h1>
+          <div class="section--separator"></div>
+          <p class="section--subtitle">Oto technologie, z których korzystam</p>
+          <div class="skills">
+            <img
+              class="skill animated wow bounceIn"
+              src="./img/skills/js.png"
+              title="JavaScript"
+            />
+            <img
+              class="skill animated wow bounceIn"
+              src="./img/skills/css.png"
+              title="CSS"
+            />
+            <img
+              class="skill animated wow bounceIn"
+              src="./img/skills/vue.png"
+              title="Vue"
+            />
+            <img
+              class="skill animated wow bounceIn"
+              src="./img/skills/golang.png"
+              title="Go"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="section section__light" id="blog" style="padding: 5% 0;">
+        <div class="section--container">
+          <h1 class="section--title">Blog</h1>
+          <div class="section--separator" style="background: #222"></div>
+          <p class="section--subtitle" style="color: #737373;">
+            Sprawdź najnowsze wpisy na moim blogu!
+          </p>
+          <div class="articles">
+            <a href="http://blog.orlow.me/acta2-fakenews">
+              <div class="article animated wow fadeInUp">
+                <img
+                  aria-hidden="true"
+                  class="img--article"
+                  src="./img/articles/0.png"
+                  title="Odpowiedź na kłamliwą wypowiedź KE"
+                />
+                <div class="article__content">
+                  <p class="article__title">
+                    Odpowiedź na kłamliwą wypowiedź KE
+                  </p>
+                  <p class="article__lead">
+                    Merytoryczna i wyczerpująca odpowiedź na artykuł KEwPL pt.
+                    “Nie, nie zabierzemy Wam memów! #ACTA2 to #FAKENEWS!”
+                  </p>
+                  <div class="article__btn">Czytaj dalej</div>
+                </div>
+              </div>
+            </a>
+            <a href="http://blog.orlow.me/patriotyzm-gospodarczy">
+              <div class="article animated wow fadeInUp">
+                <img
+                  aria-hidden="true"
+                  class="img--article"
+                  src="./img/articles/1.png"
+                  title="Patriotyzm gospodarczy - dlaczego nie?"
+                />
+                <div class="article__content">
+                  <p class="article__title">
+                    Patriotyzm gospodarczy - dlaczego nie?
+                  </p>
+                  <p class="article__lead">
+                    Głównym celem akcji typu “kupuj polskie” jest oczywiście
+                    tworzenie nowych miejsc pracy. W rzeczywistości jednak
+                    dzięki kupowaniu produktów krajowych...
+                  </p>
+                  <div class="article__btn">Czytaj dalej</div>
+                </div>
+              </div>
+            </a>
+            <a href="http://blog.orlow.me/pierwszy-wpis">
+              <div class="article animated wow fadeInUp">
+                <img
+                  aria-hidden="true"
+                  class="img--article"
+                  src="./img/articles/2.png"
+                  title="Cześć!"
+                />
+                <div class="article__content">
+                  <p class="article__title">Cześć!</p>
+                  <div class="article__lead">
+                    Oto pierwszy wpis na moim blogu. Będę publikował tutaj moje
+                    teksty poruszające bardzo wiele różnych tematów.
+                  </div>
+                  <div class="article__btn">Czytaj dalej</div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <div class="contact--map" aria-label="Mieszkam w Jaworznie"></div>
+      <section
+        class="section section__light"
+        id="contact"
+        style="padding: 5% 0;"
+      >
+        <div class="section--container">
+          <h1 class="section--title">Kontakt</h1>
+          <div class="section--separator" style="background: #222"></div>
+          <form
+            class="contact animated wow zoomInUp"
+            action="https://formspree.io/adrian@orlow.me"
+            method="POST"
+          >
+            <div class="contact__el--top">
+              <label class="contact__label">Twoje imię</label>
+              <input
+                aria-label="Miejsce na twoje imię"
+                class="contact__input"
+                placeholder="Jan Kowalski"
+                name="name"
+                required
+              />
+            </div>
+            <div class="contact__el--top">
+              <label class="contact__label">Twój email</label>
+              <input
+                aria-label="Miejsce na twój adres email"
+                class="contact__input"
+                placeholder="jan@mail.com"
+                name="_replyto"
+                required
+              />
+            </div>
+            <div class="contact__el--center">
+              <label class="contact__label">Temat</label>
+              <input
+                aria-label="Miejsce na temat wiadomości"
+                class="contact__input"
+                placeholder="Chęć podjęcia współpracy"
+                name="topic"
+                required
+              />
+            </div>
+            <div class="contact__el--center">
+              <label class="contact__label">Treść wiadomości</label>
+              <textarea
+                aria-label="Miejsce na treść wiadomości"
+                class="contact__input contact__textarea"
+                name="message"
+                required
+              ></textarea>
+            </div>
+            <button
+              class="contact__btn animated wow pulse delay-1s"
+              type="submit"
+              aria-label="Wyślij formularz"
+            >
+              Wyślij
+            </button>
+            <input type="hidden" name="_language" value="pl" />
+          </form>
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer__links">
+          <a href="http://bit.ly/aorlowTT">
+            <li>
+              <img src="./dist/fa/twitter.svg" alt="Mój profil na Twitter" />
+            </li>
+          </a>
+          <a href="http://bit.ly/aorlowFB">
+            <li>
+              <img src="./dist/fa/facebook.svg" alt="Mój profil na Facebook" />
+            </li>
+          </a>
+          <a href="http://bit.ly/aorlowGH">
+            <li>
+              <img src="./dist/fa/github.svg" alt="Mój profil na GitHub" />
+            </li>
+          </a>
+          <a href="http://bit.ly/aorlowTM">
+            <li>
+              <img src="./dist/fa/telegram.svg" alt="Mój profil na Telegram" />
+            </li>
+          </a>
+          <a href="mailto:adrian@orlow.me">
+            <li>
+              <img src="./dist/fa/mail.svg" alt="Napisz do mnie e-mail!" />
+            </li>
+          </a>
+        </ul>
+      </footer>
+    </main>
 
-<body id="body">
-	<header class="header" id="header">
-		<div class="header--container">
-			<h1 class="header--title">
-				Adrian Orłów
-			</h1>
-			<nav class="header--nav">
-				<ul class="nav--list">
-					<a class="nav__el" data-scroll href="#about">
-						<span class="nav--link">o mnie</span>
-					</a>
-					<a class="nav__el" data-scroll href="#projects">
-						<span class="nav--link">projekty</span>
-					</a>
-					<a class="nav__el" data-scroll href="#blog">
-						<span class="nav--link">blog</span>
-					</a>
-					<a class="nav__el" data-scroll href="#skills">
-						<span class="nav--link">umiejętności</span>
-					</a>
-					<a class="nav__el nav__el--last" data-scroll href="#contact">
-						<span class="nav--link link--last">kontakt</span>
-					</a>
-				</ul>
-			</nav>
-			<div class="nav--hamburger hidden">
-				<div href="#" class="hamburger--btn" onclick="toggleNav()">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-				<div class="nav--hamburger__content hidden animated fadeInDown faster">
-					<a class="hamburger--link" data-scroll onclick="toggleNav()" href="#about">o mnie</a>
-					<a class="hamburger--link" data-scroll onclick="toggleNav()" href="#projects">projekty</a>
-					<a class="hamburger--link" data-scroll onclick="toggleNav()" href="#skills">umiejętności</a>
-					<a class="hamburger--link" data-scroll onclick="toggleNav()" href="#blog">blog</a>
-					<a class="hamburger--link" data-scroll onclick="toggleNav()" href="#contact">kontakt</a>
-				</div>
-			</div>
-		</div>
-	</header>
+    <div class="modal--project block--none" id="modalProject">
+      <div class="project__header">
+        <div class="project__title text--center" id="projectName"></div>
+        <div
+          aria-label="Zamknij informacje o projekcie"
+          class="project__close text--center"
+          onclick="toggleProjectModal();"
+        >
+          <img src="./dist/fa/times.svg" aria-hidden="true" />
+        </div>
+      </div>
+      <div class="project__container">
+        <div class="project__gallery">
+          <img class="gallery__img" src="" id="projectImg" aria-hidden="true" />
+          <img
+            class="gallery__spinner"
+            src="./dist/fa/spinner.svg"
+            aria-hidden="true"
+          />
+          <div class="gallery__btns">
+            <img
+              src="./dist/fa/angle-left.svg"
+              onclick="getImage('-1')"
+              aria-hidden="true"
+            />
+            <img
+              src="./dist/fa/angle-right.svg"
+              onclick="getImage('1')"
+              aria-hidden="true"
+            />
+          </div>
+        </div>
+        <div class="project__info">
+          <div class="project__title--info" id="projectShortDesc"></div>
+          <div class="project__desc">
+            <p id="projectLongDesc"></p>
+            <div class="project__technologies" id="projectTechnologies"></div>
+          </div>
 
-	<main id="main">
-		<section class="section section__hero">
-			<div class="section--container container--hero">
-				<p class="hero--intro animated fadeIn">Cześć, jestem</p>
-				<h1 class="hero--title animated fadeIn">Adrian Orłów</h1>
+          <div class="project__license">
+            <div class="project__license__title text--center">Licencja</div>
+            <div
+              class="project__license__name text--center"
+              id="projectLicense"
+            ></div>
+          </div>
 
-				<div class="container--hero__btn animated fadeInUp delay-1s">
-					<a class="hero__btn" data-scroll href="#about">Poznaj mnie</a>
-				</div>
-			</div>
-		</section>
-		<section class="section section__dark" id="about">
-			<div class="section--container">
-				<h1 class="section--title">O mnie</h1>
-				<div class="section--separator"></div>
-				<p class="section--subtitle">Nieco na mój temat. Kliknij, aby dowiedzieć się więcej.</p>
-				<div class="about">
-					<div class="about__container">
-						<a class="about--el wow pulse animated" data-scroll href="#projects">
-							<img src="./img/about/programming.png">
-							<span>Programuję</span>
-						</a>
-						<a class="about--el wow pulse animated" data-scroll href="#blog">
-							<img src="./img/about/writing.jpg">
-							<span>Bloguję</span>
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="section section__light" id="projects" style="padding: 5% 0;">
-			<div class="section--container">
-				<h1 class="section--title">Projekty</h1>
-				<div class="section--separator" style="background: #222"></div>
-				<p class="section--subtitle" style="color: #737373;">Poniżej znajdują się projekty stworzone przeze mnie w
-					przeciągu
-					ostatnich kilku miesięcy.</p>
-				<div class="projects">
-					<div onclick="showProjectInfo('short-news')" class="project animated wow zoomIn">
-						<img class="img--project" src="./img/projects/short-news.jpg">
-						<p class="p--project">ShortNews</p>
-					</div>
-					<div onclick="showProjectInfo('schoolbot')" class="project animated wow zoomIn">
-						<img class="img--project" src="./img/projects/schoolbot.jpg">
-						<p class="p--project">SchoolBot</p>
-					</div>
-					<div onclick="showProjectInfo('moje-zdrowie')" class="project animated wow zoomIn">
-						<img class="img--project" src="./img/projects/moje-zdrowie.jpg">
-						<p class="p--project">Moje Zdrowie</p>
-					</div>
-				</div>
-				<div class="projects">
-					<div onclick="showProjectInfo('vlocal')" class="project animated wow zoomIn">
-						<img class="img--project" src="./img/projects/vlocal.jpg">
-						<p class="p--project">vLocal</p>
-					</div>
-					<div onclick="showProjectInfo('mypolitics')" class="project animated wow zoomIn">
-						<img class="img--project" src="./img/projects/mypolitics.jpg">
-						<p class="p--project">myPolitics</p>
-					</div>
-					<div onclick="showProjectInfo('mylibrary')" class="project animated wow zoomIn">
-						<img class="img--project" src="./img/projects/mylibrary.jpg">
-						<p class="p--project">myLibrary</p>
-					</div>
-				</div>
-				<div class="projects">
-					<div onclick="showProjectInfo('mini')" class="project animated wow zoomIn">
-						<img class="img--project" src="./img/projects/mini.jpg">
-						<p class="p--project">Mini</p>
-					</div>
-					<div onclick="showProjectInfo('groupadmin')" class="project animated wow zoomIn">
-						<img class="img--project" src="./img/projects/groupadmin.jpg">
-						<p class="p--project">GroupAdmin</p>
-					</div>
-					<div onclick="showProjectInfo('orlowblog')" class="project animated wow zoomIn">
-						<img class="img--project" src="./img/projects/aoblog.jpg">
-						<p class="p--project">Adrian Orłów Blog</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="section section__dark" id="skills">
-			<div class="section--container" style="padding: 5% 0;">
-				<h1 class="section--title">Umiejętności</h1>
-				<div class="section--separator"></div>
-				<p class="section--subtitle">Oto technologie, z których korzystam</p>
-				<div class="skills">
-					<img class="skill animated wow bounceIn" src="./img/skills/js.png" title="JavaScript">
-					<img class="skill animated wow bounceIn" src="./img/skills/css.png" title="CSS">
-					<img class="skill animated wow bounceIn" src="./img/skills/vue.png" title="Vue">
-					<img class="skill animated wow bounceIn" src="./img/skills/golang.png" title="Go">
-				</div>
-			</div>
-		</section>
-		<section class="section section__light" id="blog" style="padding: 5% 0;">
-			<div class="section--container">
-				<h1 class="section--title">Blog</h1>
-				<div class="section--separator" style="background: #222"></div>
-				<p class="section--subtitle" style="color: #737373;">Sprawdź najnowsze wpisy na moim blogu!</p>
-				<div class="articles">
-					<a href="http://blog.orlow.me/acta2-fakenews">
-						<div class="article animated wow fadeInUp">
-							<img class="img--article" src="./img/articles/0.png" title="Odpowiedź na kłamliwą wypowiedź KE">
-							<div class="article__content">
-								<p class="article__title">Odpowiedź na kłamliwą wypowiedź KE</p>
-								<p class="article__lead">Merytoryczna i wyczerpująca odpowiedź na artykuł KEwPL pt. “Nie, nie zabierzemy Wam memów! #ACTA2 to #FAKENEWS!”</p>
-								<div class="article__btn">Czytaj dalej</div>
-							</div>
-						</div>
-					</a>
-					<a href="http://blog.orlow.me/patriotyzm-gospodarczy">
-						<div class="article animated wow fadeInUp">
-							<img class="img--article" src="./img/articles/1.png" title="Patriotyzm gospodarczy - dlaczego nie?">
-							<div class="article__content">
-								<p class="article__title">Patriotyzm gospodarczy - dlaczego nie?</p>
-								<p class="article__lead">Głównym celem akcji typu “kupuj polskie” jest oczywiście tworzenie nowych miejsc pracy. W rzeczywistości jednak dzięki kupowaniu produktów krajowych...</p>
-								<div class="article__btn">Czytaj dalej</div>
-							</div>
-						</div>
-					</a>
-					<a href="http://blog.orlow.me/pierwszy-wpis">
-						<div class="article animated wow fadeInUp">
-							<img class="img--article" src="./img/articles/2.png" title="Cześć!">
-							<div class="article__content">
-								<p class="article__title">Cześć!</p>
-								<div class="article__lead">Oto pierwszy wpis na moim blogu. Będę publikował tutaj moje teksty poruszające bardzo wiele różnych tematów.</div>
-								<div class="article__btn">Czytaj dalej</div>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-		</section>
-		<div class="contact--map"></div>
-		<section class="section section__light" id="contact" style="padding: 5% 0;">
-			<div class="section--container">
-				<h1 class="section--title">Kontakt</h1>
-				<div class="section--separator" style="background: #222"></div>
-				<form class="contact animated wow zoomInUp" action="https://formspree.io/adrian@orlow.me" method="POST">
-					<div class="contact__el--top">
-						<span class="contact__label">Twoje imię</span>
-						<input class="contact__input" placeholder="Jan Kowalski" name="name" required>
-					</div>
-					<div class="contact__el--top">
-						<span class="contact__label">Twój email</span>
-						<input class="contact__input" placeholder="jan@mail.com" name="_replyto" required>
-					</div>
-					<div class="contact__el--center">
-						<span class="contact__label">Temat</span>
-						<input class="contact__input" placeholder="Chęć podjęcia współpracy" name="topic" required>
-					</div>
-					<div class="contact__el--center">
-						<span class="contact__label">Treść wiadomości</span>
-						<textarea class="contact__input contact__textarea" name="message" required></textarea>
-					</div>
-					<button class="contact__btn animated wow pulse delay-1s" type="submit">Wyślij</button>
-					<input type="hidden" name="_language" value="pl" />
-				</form>
-			</div>
-		</section>
-		<footer class="footer">
-			<ul class="footer__links">
-				<a href="http://bit.ly/aorlowTT">
-					<li>
+          <div class="project__btns">
+            <a
+              class="project__btn project__btn--github text--center"
+              id="projectSource"
+              href="#"
+            >
+              <img src="./dist/fa/github.svg" />
+              <p>Kod</p>
+            </a>
+            <a
+              class="project__btn project__btn--demo text--center"
+              id="projectDemo"
+              href="#"
+            >
+              <p>Demo</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-						<i class="fab fa-twitter"></i>
-					</li>
-				</a>
-				<a href="http://bit.ly/aorlowFB">
-					<li>
-						<i class="fab fa-facebook-f"></i>
-					</li>
-				</a>
-				<a href="http://bit.ly/aorlowGH">
-					<li>
-						<i class="fab fa-github"></i>
-					</li>
-				</a>
-				<a href="http://bit.ly/aorlowTM">
-					<li>
-						<i class="fab fa-telegram-plane"></i>
-					</li>
-				</a>
-				<a href="mailto:adrian@orlow.me">
-					<li>
-						<i class="fas fa-envelope"></i>
-					</li>
-				</a>
-			</ul>
-		</footer>
-	</main>
-
-	<div class="modal--project block--none" id="modalProject">
-		<div class="project__header">
-			<div class="project__title text--center" id="projectName"></div>
-			<div class="project__close text--center" onclick="toggleProjectModal();"><i class="fas fa-times"></i></div>
-		</div>
-		<div class="project__container">
-			<div class="project__gallery">
-				<img src="" id="projectImg">
-				<div class="gallery__btns">
-					<i class="fas fa-angle-left" onclick="getImage('-1')"></i>
-					<i class="fas fa-angle-right" onclick="getImage('1')"></i>
-				</div>
-			</div>
-			<div class="project__info">
-				<div class="project__title--info" id="projectShortDesc"></div>
-				<div class="project__desc">
-					<p id="projectLongDesc"></p>
-					<div class="project__technologies" id="projectTechnologies"></div>
-				</div>
-
-				<div class="project__license">
-					<div class="project__license__title text--center">Licencja</div>
-					<div class="project__license__name text--center" id="projectLicense"></div>
-				</div>
-
-				<div class="project__btns">
-					<a class="project__btn project__btn--github text--center" id="projectSource" href="#">
-						<i class="fab fa-github"></i>
-						<p>Kod</p>
-					</a>
-					<a class="project__btn project__btn--demo text--center" id="projectDemo" href="#">
-						<p>Demo</p>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- App scripts -->
-	<script src="dist/js/app.min.js"></script>
-	<!--<script src="src/js/app.js"></script>-->
-	<!-- GA -->
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfKXRZXeuDipRrraTgKT2JAf5qqLqDQj4&callback=initMap">
-	</script>
-</body>
-
+    <!-- App scripts -->
+    <script src="dist/js/app.min.js"></script>
+    <!--<script src="src/js/app.js"></script>-->
+    <!-- GA -->
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfKXRZXeuDipRrraTgKT2JAf5qqLqDQj4&callback=initMap"
+    ></script>
+  </body>
 </html>
