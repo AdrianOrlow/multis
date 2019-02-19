@@ -665,32 +665,39 @@ input:focus::-webkit-input-placeholder {
 }
 
 .project {
-  height: 17%;
-  width: 30%;
+  height: auto;
+  width: 100%;
   cursor: pointer;
   transition: 0.2s ease-in-out;
   margin-bottom: 1em;
   margin-top: 1em;
 }
 
-.project:hover .img--project {
+.project:not(:last-child) {
+  margin-right: 2em;
+}
+
+.project:hover .project__content {
   transform: translateY(-3%);
   -webkit-box-shadow: 0px 10px 20px 0px rgba(209, 209, 209, 1);
   -moz-box-shadow: 0px 10px 20px 0px rgba(209, 209, 209, 1);
   box-shadow: 0px 10px 20px 0px rgba(209, 209, 209, 1);
 }
 
-.p--project {
+/*.p--project {
   margin-top: 1em;
   font-size: 1.4em;
   font-weight: 600;
-}
+}*/
 
-.img--project {
-  height: 100%;
+.project__content {
+  height: 20rem;
   width: 100%;
   transition: 0.2s ease-in-out;
-  border-radius: 1em;
+  border-radius: 1rem;
+  font-size: 2.25em;
+  color: #fafafa;
+  font-weight: 600;
 }
 
 /* Skills */
@@ -766,14 +773,13 @@ input:focus::-webkit-input-placeholder {
 }
 
 .article__lead {
-  white-space: pre-line;
-  max-height: 5em;
-  height: 5em;
-  text-overflow: ellipsis;
-  margin-top: 1em;
-  text-align: left;
-  font-size: 1.1em;
-  line-height: 20px;
+    max-height: 7rem;
+    height: 7rem;
+    text-overflow: ellipsis;
+    margin-top: 1em;
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 20px;
 }
 
 .article__btn {
@@ -1171,6 +1177,12 @@ input:focus::-webkit-input-placeholder {
   overflow: hidden;
 }
 
+.projects,
+.articles,
+.contact {
+  max-width: 1350px;
+}
+
 @media (max-width: 1600px) {
   .article {
     width: 23em;
@@ -1218,6 +1230,10 @@ input:focus::-webkit-input-placeholder {
 
   .skills {
     width: 90%;
+  }
+
+  .project__content img {
+    height: 1em;
   }
 }
 
@@ -1320,6 +1336,10 @@ input:focus::-webkit-input-placeholder {
   .project {
     width: 100%;
     margin-bottom: 2em;
+  }
+
+  .project__content {
+    height: 15rem;
   }
 
   .articles {
