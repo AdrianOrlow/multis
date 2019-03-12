@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+    ></script>
+    <title>Apki Matematyka</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="project">
+        <h1>Trójkąt Pascala</h1>
+        <div class="app app--pt">
+          <div class="app__actions">
+            <label class="actions__input">
+              Poziomy:
+              <input type="text" placeholder="5" value="5" id="pascalsTriangleLevels" />
+            </label>
+            <button class="actions__btn" id="pascalsTriangleBtn">
+            </button>
+          </div>
+          <div class="app__content">
+            <div class="triangle" id="triangle">
+              <h3>Kliknij przycisk</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="project">
+        <h1>Kombinacja bez powtórzeń</h1>
+        <div class="app app--c">
+          <div class="app__actions">
+            <label class="actions__input">
+              n (wiersz):
+              <input type="text" placeholder="5" id="combinationN" />
+            </label>
+            <label class="actions__input">
+              k (miejsce):
+              <input type="text" placeholder="2" id="combinationK" />
+            </label>
+          </div>
+          <div class="app__content">
+              <p id="combinationBox" mathjax-bind="expression"></p>
+            </div>
+        </div>
+      </section>
+      <section class="project">
+        <h1>Trójkąt Sierpińskiego w trójkącie Pascala</h1>
+        <div class="app app--st">
+          <div class="app__actions">
+            <label class="actions__input">
+              Poziomy:
+              <input type="text" placeholder="5" value="5" id="sTriangleLevels" />
+            </label>
+            <button class="actions__btn actions__btn--do" id="sTriangleBtn">
+            </button>
+          </div>
+          <div class="app__content">
+            <div class="triangle" id="sTriangle">
+              <h3>Kliknij przycisk</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="app.min.js"></script>
+  </body>
+</html>
